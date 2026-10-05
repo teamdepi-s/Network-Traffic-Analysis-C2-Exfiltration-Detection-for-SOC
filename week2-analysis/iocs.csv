@@ -15,8 +15,6 @@ uri_path,/beacon,Beacon URI path,http.log,2026-10-03 20:45:49,2026-10-03 21:00:2
 user_agent,python-requests/2.34.2,Scripted client UA used for beaconing,http.log,2026-10-03 20:45:49,2026-10-03 21:00:20,30,Medium,Medium
 ip:port,192.168.40.129:4444/tcp,Port 4444 (Metasploit default listener); 2 conns incl. 161s session with 27 bytes sent,conn.log,2026-10-03 20:38:41,2026-10-03 20:42:05,2,Medium,High
 ip:port,192.168.40.129:5555/tcp,"Single conn transferring 52,428,800 bytes (50 MiB) from 192.168.40.1; possible exfil/payload transfer",conn.log,2026-10-03 20:52:59,2026-10-03 20:53:00,1,Medium,High
-mac,00:50:56:c0:00:08,MAC of 192.168.40.1 / EZZAT-PC (VMware vNIC),dhcp.log,2026-10-03 20:42:17,2026-10-03 20:57:26,2,Medium,Low
 hostname,EZZAT-PC,Hostname of 192.168.40.1; also LLMNR/mDNS queries,dhcp.log;dns.log,2026-10-03 20:42:17,2026-10-03 20:57:26,,Medium,Low
-mac,00:0c:29:7b:77:1f,MAC of 192.168.40.129,dhcp.log,2026-10-03 20:38:14,2026-10-05 14:06:00,3,Medium,Low
 icmp,192.168.40.1 -> 192.168.40.129 ICMP echo (type 8),ICMP echo toward .129 just before DNS burst,conn.log,2026-10-05 14:02:57,2026-10-05 14:03:00,1,Low,Low
 icmp,192.168.40.129 -> 192.168.40.1 ICMP type 3 (unreachable),Large ICMP unreachable replies (2264 and 389 bytes) after unanswered DNS to .129:53; DNS was sent to .129 but never answered,conn.log,2026-10-05 14:03:41,2026-10-05 14:06:03,2,Low,Low
