@@ -129,12 +129,14 @@ network-threat-detection-soc/
 │   └── baseline-summary.md          # Normal traffic profile used for comparison
 │
 ├── week2-analysis/
+|   ├── pcaps/                       #  the PCAP file (traffic capture)
+|   ├── screenshots/                 # PCAP evidence screenshots(beacon, DNS, http, conservation, TCP stream)
 │   ├── zeek-logs/                   # Generated Zeek logs
 │   ├── suricata-output/             # eve.json / fast.log
-│   ├── alert-review.md              # True/False positive triage with justification
+│   └── evidence/                    # Trimmed PCAPs containing only suspicious packets
 │   ├── findings.md                  # Structured findings (ID, severity, evidence)
 │   ├── ioc-list.csv                 # type, value, context, first_seen, source_pcap, confidence
-│   └── evidence/                    # Trimmed PCAPs containing only suspicious packets
+│   ├── alert-review.md              # True/False positive triage with justification
 │
 ├── week3-detection/
 │   ├── scan-detection.md            # Nmap scan signatures and detection
