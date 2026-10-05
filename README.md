@@ -133,10 +133,10 @@ network-threat-detection-soc/
 |   ├── screenshots/                 # PCAP evidence screenshots(beacon, DNS, http, conservation, TCP stream)
 │   ├── zeek-logs/                   # Generated Zeek logs
 │   ├── suricata-output/             # eve.json / fast.log
-│   └── evidence/                    # Trimmed PCAPs containing only suspicious packets
+│   ├── evidence/                    # Trimmed PCAPs containing only suspicious packets
 │   ├── findings.md                  # Structured findings (ID, severity, evidence)
 │   ├── ioc-list.csv                 # type, value, context, first_seen, source_pcap, confidence
-│   ├── alert-review.md              # True/False positive triage with justification
+│   └── alert-review.md              # True/False positive triage with justification
 │
 ├── week3-detection/
 │   ├── scan-detection.md            # Nmap scan signatures and detection
