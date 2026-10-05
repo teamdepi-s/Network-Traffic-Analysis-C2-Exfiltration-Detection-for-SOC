@@ -1,0 +1,22 @@
+ioc_type,indicator,description,source_log,first_seen_utc,last_seen_utc,count,confidence,severity
+domain,malicious-c2.xyz,Parent domain of DNS queries with random/DGA-like subdomains (likely DNS tunneling or C2),dns.log,2026-10-05 14:03:43,2026-10-05 14:06:03,26,High,High
+fqdn,capf0hr7x65bqn981duw.malicious-c2.xyz,Random-looking subdomain under malicious-c2.xyz; A and AAAA lookups (no answers),dns.log,2026-10-05 14:06:01,2026-10-05 14:06:03,2,High,High
+fqdn,f83s5xveji7tn1q2ugbr.malicious-c2.xyz,Random-looking subdomain under malicious-c2.xyz; A and AAAA lookups (no answers),dns.log,2026-10-05 14:05:29,2026-10-05 14:05:35,4,High,High
+fqdn,l7fthbajv4q9p32mcoys.malicious-c2.xyz,Random-looking subdomain under malicious-c2.xyz; A and AAAA lookups (no answers),dns.log,2026-10-05 14:05:39,2026-10-05 14:05:45,4,High,High
+fqdn,lxpht4i9n7vqug5w3mfr.malicious-c2.xyz,Random-looking subdomain under malicious-c2.xyz; A and AAAA lookups (no answers),dns.log,2026-10-05 14:05:08,2026-10-05 14:05:14,4,High,High
+fqdn,m9yjsbv2rk0a734qtngz.malicious-c2.xyz,Random-looking subdomain under malicious-c2.xyz; A and AAAA lookups (no answers),dns.log,2026-10-05 14:05:50,2026-10-05 14:06:00,4,High,High
+fqdn,random-subdomain.malicious-c2.xyz,Random-looking subdomain under malicious-c2.xyz; A and AAAA lookups (no answers),dns.log,2026-10-05 14:03:43,2026-10-05 14:03:49,4,High,High
+fqdn,t7d2m1i6ycja8hbeg54z.malicious-c2.xyz,Random-looking subdomain under malicious-c2.xyz; A and AAAA lookups (no answers),dns.log,2026-10-05 14:05:18,2026-10-05 14:05:24,4,High,High
+ip,192.168.40.1,"Internal host (EZZAT-PC): source of /beacon HTTP, DNS queries to malicious-c2.xyz, connections to 4444/5555, ICMP",conn.log;http.log;dns.log,2026-10-03 20:38:41,2026-10-05 14:06:00,,High,High
+ip,192.168.40.129,"Internal host (VMware MAC 00:0c:29:7b:77:1f): beacon target on 8000, port 4444/5555 target, queried as DNS resolver for C2 domain",conn.log;http.log;dns.log,2026-10-03 20:38:41,2026-10-05 14:06:00,,Medium,High
+ip:port,192.168.40.129:8000,HTTP beacon server; 30 GET /beacon requests at ~30s interval,http.log;conn.log,2026-10-03 20:45:49,2026-10-03 21:00:20,30,High,High
+url,http://192.168.40.129:8000/beacon,"Periodic HTTP C2 beacon (~30s), empty body, no referrer",http.log,2026-10-03 20:45:49,2026-10-03 21:00:20,30,High,High
+uri_path,/beacon,Beacon URI path,http.log,2026-10-03 20:45:49,2026-10-03 21:00:20,30,High,Medium
+user_agent,python-requests/2.34.2,Scripted client UA used for beaconing,http.log,2026-10-03 20:45:49,2026-10-03 21:00:20,30,Medium,Medium
+ip:port,192.168.40.129:4444/tcp,Port 4444 (Metasploit default listener); 2 conns incl. 161s session with 27 bytes sent,conn.log,2026-10-03 20:38:41,2026-10-03 20:42:05,2,Medium,High
+ip:port,192.168.40.129:5555/tcp,"Single conn transferring 52,428,800 bytes (50 MiB) from 192.168.40.1; possible exfil/payload transfer",conn.log,2026-10-03 20:52:59,2026-10-03 20:53:00,1,Medium,High
+mac,00:50:56:c0:00:08,MAC of 192.168.40.1 / EZZAT-PC (VMware vNIC),dhcp.log,2026-10-03 20:42:17,2026-10-03 20:57:26,2,Medium,Low
+hostname,EZZAT-PC,Hostname of 192.168.40.1; also LLMNR/mDNS queries,dhcp.log;dns.log,2026-10-03 20:42:17,2026-10-03 20:57:26,,Medium,Low
+mac,00:0c:29:7b:77:1f,MAC of 192.168.40.129,dhcp.log,2026-10-03 20:38:14,2026-10-05 14:06:00,3,Medium,Low
+icmp,192.168.40.1 -> 192.168.40.129 ICMP echo (type 8),ICMP echo toward .129 just before DNS burst,conn.log,2026-10-05 14:02:57,2026-10-05 14:03:00,1,Low,Low
+icmp,192.168.40.129 -> 192.168.40.1 ICMP type 3 (unreachable),Large ICMP unreachable replies (2264 and 389 bytes) after unanswered DNS to .129:53; DNS was sent to .129 but never answered,conn.log,2026-10-05 14:03:41,2026-10-05 14:06:03,2,Low,Low

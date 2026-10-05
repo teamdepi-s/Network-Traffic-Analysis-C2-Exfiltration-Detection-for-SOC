@@ -1,0 +1,21 @@
+[118473 - Suricata-Main] 2026-10-05 17:14:28 Notice: suricata: This is Suricata version 8.0.7 RELEASE running in USER mode
+[118473 - Suricata-Main] 2026-10-05 17:14:28 Info: cpu: CPUs/cores online: 4
+[118473 - Suricata-Main] 2026-10-05 17:14:28 Info: suricata: Setting engine mode to IDS mode by default
+[118473 - Suricata-Main] 2026-10-05 17:14:28 Info: exception-policy: master exception-policy set to: auto
+[118473 - Suricata-Main] 2026-10-05 17:14:28 Info: suricata: Preparing unexpected signal handling
+[118473 - Suricata-Main] 2026-10-05 17:14:28 Info: logopenfile: fast output device (regular) initialized: fast.log
+[118473 - Suricata-Main] 2026-10-05 17:14:28 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[118473 - Suricata-Main] 2026-10-05 17:14:28 Info: logopenfile: stats output device (regular) initialized: stats.log
+[118473 - Suricata-Main] 2026-10-05 17:14:42 Info: detect: 1 rule files processed. 53098 rules successfully loaded, 0 rules failed, 0 rules skipped
+[118473 - Suricata-Main] 2026-10-05 17:14:42 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[118473 - Suricata-Main] 2026-10-05 17:14:42 Info: detect: 53103 signatures processed. 1248 are IP-only rules, 4540 are inspecting packet payload, 47079 inspect application layer, 110 are decoder event only
+[118473 - Suricata-Main] 2026-10-05 17:14:45 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[118611 - RX#01] 2026-10-05 17:14:45 Info: pcap: Starting file run for pcaps/attack.pcapng
+[118473 - Suricata-Main] 2026-10-05 17:14:45 Notice: threads: Threads created -> RX: 1 W: 4 FM: 1 FR: 1   Engine started.
+[118611 - RX#01] 2026-10-05 17:14:45 Info: checksum: Less than 1/10th of packets have an invalid checksum, assuming checksum offloading is NOT used (29/1000)
+[118611 - RX#01] 2026-10-05 17:14:45 Info: pcap: pcap file pcaps/attack.pcapng end of file reached (pcap err code 0)
+[118473 - Suricata-Main] 2026-10-05 17:14:45 Notice: suricata: Signal Received.  Stopping engine.
+[118473 - Suricata-Main] 2026-10-05 17:14:45 Info: suricata: time elapsed 0.651s
+[118611 - RX#01] 2026-10-05 17:14:45 Notice: pcap: read 1 file, 7892 packets, 43042467 bytes
+[118473 - Suricata-Main] 2026-10-05 17:14:45 Info: counters: Alerts: 6843
+[118610 - US] 2026-10-05 17:14:45 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket' closed
