@@ -17,8 +17,8 @@ Roles follow the lab description and are supported by the packet evidence (TTL a
 
 | Role | IP address | Identifiers | Evidence for role |
 |---|---|---|---|
-| Lab victim | `192.168.40.1` | Hostname `EZZAT-PC`, MAC `00:50:56:c0:00:08` | TTL 128 (Windows-like); initiates every anomalous flow |
-| Kali analysis host | `192.168.40.129` | MAC `00:0c:29:7b:77:1f` (VMware) | TTL 64 (Linux-like); HTTP server on 8000, listener on 4444 and 5555 |
+| Lab victim | `192.168.40.1` | Hostname `EZZAT-PC` | TTL 128 (Windows-like); initiates every anomalous flow |
+| Kali analysis host | `192.168.40.129` |  (VMware) | TTL 64 (Linux-like); HTTP server on 8000, listener on 4444 and 5555 |
 | Lab DNS resolver | `192.168.40.2` | — | Answers normal DNS queries |
 | Lab DHCP server | `192.168.40.254` | — | Lease renewals only |
 
