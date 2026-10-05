@@ -305,7 +305,7 @@ Documented hallucinations and misclassifications are included deliberately, to s
 ## 13. Project Status
 
 - [ ] **Week 1:** Foundations & capture
-- [ ] **Week 2:** Protocol analysis & anomaly identification
+- [x] **Week 2:** Protocol analysis & anomaly identification
 - [ ] **Week 3:** Recon, C2 & exfiltration detection
 - [ ] **Week 4:** AI-assisted triage & final report
 
