@@ -136,7 +136,8 @@ network-threat-detection-soc/
 │   ├── evidence/                    # Trimmed PCAPs containing only suspicious packets
 │   ├── findings.md                  # Structured findings (ID, severity, evidence)
 │   ├── ioc-list.csv                 # type, value, context, first_seen, source_pcap, confidence
-│   └── alert-review.md              # True/False positive triage with justification
+│   ├── alert-review.md             # True/False positive triage with justification
+|   └── protocol-analysis-report     # looks at every protocol that appeared on the lab
 │
 ├── week3-detection/
 │   ├── scan-detection.md            # Nmap scan signatures and detection
