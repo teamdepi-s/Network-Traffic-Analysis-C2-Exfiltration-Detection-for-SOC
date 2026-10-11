@@ -136,12 +136,24 @@ network-threat-detection-soc/
 │   ├── evidence/                    # Trimmed PCAPs containing only suspicious packets
 │   ├── findings.md                  # Structured findings (ID, severity, evidence)
 │   ├── ioc-list.csv                 # type, value, context, first_seen, source_pcap, confidence
-│   ├── alert-review.md             # True/False positive triage with justification
+│   ├── alert-review.md              # True/False positive triage with justification
 |   └── protocol-analysis-report     # looks at every protocol that appeared on the lab
 │
 ├── week3-detection/
-│   ├── scan-detection.md            # Nmap scan signatures and detection
-│   ├── c2-exfil-analysis.md         # Beaconing, DGA, exfiltration, web shell analysis
+|   ├── Nmap scanning/
+│       ├── Nmap scan.md             # Nmap scan signatures and detection 
+│       ├── pcaps/                   # Packet captures of the five scans
+|           ├── SYN scan             # nmap -sS: SYN-only probes, half-open
+|           ├── Services detection   # nmap -sV: version probes and HTTP banner grab
+|           ├── OS detection         # nmap -O : fingerprint probes (odd flags, ICMP, UDP)
+|           ├── NULL scan            # nmap -sN: TCP packets with no flags
+|           ├── XMAS sacn            # map -sX : TCP packets with FIN+PSH+URG
+|       ├── Tshark/                  # shark CSV exports used to check the Wireshark filters
+|       ├── suricataWithoutRules/    # Suricata logs from the default ruleset (no scan alerts)
+|       ├── suricataWithRules/       # Suricata logs with the scan-detection rules (all scans detected)
+|       ├── report/                  # Final report and Nmap results summary
+|
+|   ├── c2-exfil-analysis.md         # Beaconing, DGA, exfiltration, web shell analysis
 │   ├── mitre-mapping.md             # Technique ↔ evidence ↔ detection table
 │   ├── attack-navigator-layer.json  # ATT&CK Navigator coverage layer
 │   ├── detection-logic.md           # Conditions, thresholds, expected false positives
