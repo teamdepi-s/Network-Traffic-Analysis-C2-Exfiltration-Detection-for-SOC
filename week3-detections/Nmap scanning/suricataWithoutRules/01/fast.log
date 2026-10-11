@@ -1,0 +1,9 @@
+10/08/2026-14:18:54.097422  [**] [1:2200075:2] SURICATA UDPv4 invalid checksum [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {UDP} 192.168.40.129:59948 -> 196.49.100.57:123
+10/08/2026-14:20:25.093294  [**] [1:2200075:2] SURICATA UDPv4 invalid checksum [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {UDP} 192.168.40.129:60438 -> 196.49.100.57:123
+10/08/2026-14:19:25.106138  [**] [1:2200075:2] SURICATA UDPv4 invalid checksum [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {UDP} 192.168.40.129:49471 -> 196.49.100.57:123
+10/08/2026-14:19:54.078288  [**] [1:2200075:2] SURICATA UDPv4 invalid checksum [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {UDP} 192.168.40.129:59893 -> 196.49.100.57:123
+10/08/2026-14:20:37.624860  [**] [1:2200075:2] SURICATA UDPv4 invalid checksum [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {UDP} 192.168.40.129:54369 -> 192.168.40.2:53
+10/08/2026-14:20:54.104930  [**] [1:2200075:2] SURICATA UDPv4 invalid checksum [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {UDP} 192.168.40.129:37593 -> 196.49.100.57:123
+10/08/2026-14:21:25.136515  [**] [1:2200075:2] SURICATA UDPv4 invalid checksum [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {UDP} 192.168.40.129:56490 -> 196.49.100.57:123
+10/08/2026-14:22:25.145047  [**] [1:2200075:2] SURICATA UDPv4 invalid checksum [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {UDP} 192.168.40.129:50942 -> 196.49.100.57:123
+10/08/2026-14:21:54.101637  [**] [1:2200075:2] SURICATA UDPv4 invalid checksum [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {UDP} 192.168.40.129:34720 -> 196.49.100.57:123

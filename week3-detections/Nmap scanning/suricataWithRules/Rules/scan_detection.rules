@@ -1,0 +1,19 @@
+# Local scan-detection rules for the five Nmap captures (SIDs 1000201 to 1000210)
+# Designed for Suricata 8.x. Load with:  suricata -r <file>.pcapng -S scan_detection.rules -k none -l <logdir>
+# $HOME_NET must include 192.168.40.0/24 (the default private ranges do).
+
+# --- Port scans by TCP flag pattern (packet level, threshold per source) ---
+alert tcp any any -> $HOME_NET any (msg:"LOCAL SCAN TCP NULL scan (no flags set)"; flags:0; threshold:type both, track by_src, count 20, seconds 10; classtype:attempted-recon; sid:1000201; rev:1; metadata:mitre_tactic_id TA0007, mitre_technique_id T1046;)
+alert tcp any any -> $HOME_NET any (msg:"LOCAL SCAN TCP XMAS scan (FIN PSH URG)"; flags:FPU,12; threshold:type both, track by_src, count 20, seconds 10; classtype:attempted-recon; sid:1000202; rev:1; metadata:mitre_tactic_id TA0007, mitre_technique_id T1046;)
+alert tcp any any -> $HOME_NET any (msg:"LOCAL SCAN TCP SYN sweep (100+ SYN in 10s from one source)"; flags:S,12; threshold:type both, track by_src, count 100, seconds 10; classtype:attempted-recon; sid:1000203; rev:1; metadata:mitre_tactic_id TA0007, mitre_technique_id T1046;)
+alert tcp any any -> $HOME_NET any (msg:"LOCAL SCAN Nmap SYN probe fingerprint (window 1024)"; flags:S,12; window:1024; threshold:type both, track by_src, count 50, seconds 10; classtype:attempted-recon; sid:1000204; rev:1; metadata:mitre_tactic_id TA0043, mitre_technique_id T1595;)
+
+# --- Nmap OS detection probes (single packet, no threshold) ---
+alert icmp any any -> $HOME_NET any (msg:"LOCAL SCAN Nmap OS detection ICMP echo with code 9"; itype:8; icode:9; classtype:attempted-recon; sid:1000205; rev:1; metadata:mitre_tactic_id TA0043, mitre_technique_id T1592.002;)
+alert tcp any any -> $HOME_NET any (msg:"LOCAL SCAN TCP SYN+FIN illegal flag combination (Nmap OS probe)"; flags:SF+,12; classtype:attempted-recon; sid:1000206; rev:1; metadata:mitre_tactic_id TA0043, mitre_technique_id T1592.002;)
+alert udp any any -> $HOME_NET any (msg:"LOCAL SCAN Nmap OS detection UDP probe (IP-ID 4162, 300 bytes)"; id:4162; dsize:300; classtype:attempted-recon; sid:1000207; rev:1; metadata:mitre_tactic_id TA0043, mitre_technique_id T1592.002;)
+
+# --- Nmap service/version detection and scripts ---
+alert http any any -> any any (msg:"LOCAL SCAN Nmap Scripting Engine user agent"; flow:established,to_server; http.user_agent; content:"Nmap Scripting Engine"; classtype:attempted-recon; sid:1000208; rev:1; metadata:mitre_tactic_id TA0043, mitre_technique_id T1595;)
+alert tcp any any -> any any (msg:"LOCAL SCAN Nmap Scripting Engine user agent (raw TCP fallback)"; flow:established,to_server; content:"Nmap Scripting Engine"; classtype:attempted-recon; sid:1000209; rev:1; metadata:mitre_tactic_id TA0043, mitre_technique_id T1595;)
+alert http any any -> any any (msg:"LOCAL SCAN Nmap NSE probe path /nmaplowercheck"; flow:established,to_server; http.uri; content:"/nmaplowercheck"; startswith; classtype:attempted-recon; sid:1000210; rev:1; metadata:mitre_tactic_id TA0043, mitre_technique_id T1595;)

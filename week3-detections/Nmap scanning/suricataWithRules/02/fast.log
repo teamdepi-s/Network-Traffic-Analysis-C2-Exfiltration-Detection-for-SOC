@@ -1,0 +1,11 @@
+10/08/2026-14:33:52.176135  [**] [1:1000204:1] LOCAL SCAN Nmap SYN probe fingerprint (window 1024) [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.40.129:52397 -> 192.168.40.1:10002
+10/08/2026-14:33:54.089212  [**] [1:1000203:1] LOCAL SCAN TCP SYN sweep (100+ SYN in 10s from one source) [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.40.129:52395 -> 192.168.40.1:7800
+10/08/2026-14:34:03.556774  [**] [1:1000208:1] LOCAL SCAN Nmap Scripting Engine user agent [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.40.129:59376 -> 192.168.40.1:3580
+10/08/2026-14:34:03.556774  [**] [1:1000209:1] LOCAL SCAN Nmap Scripting Engine user agent (raw TCP fallback) [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.40.129:59376 -> 192.168.40.1:3580
+10/08/2026-14:34:03.551826  [**] [1:1000208:1] LOCAL SCAN Nmap Scripting Engine user agent [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.40.129:59370 -> 192.168.40.1:3580
+10/08/2026-14:34:03.551826  [**] [1:1000209:1] LOCAL SCAN Nmap Scripting Engine user agent (raw TCP fallback) [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.40.129:59370 -> 192.168.40.1:3580
+10/08/2026-14:34:03.551856  [**] [1:1000208:1] LOCAL SCAN Nmap Scripting Engine user agent [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.40.129:59366 -> 192.168.40.1:3580
+10/08/2026-14:34:03.551856  [**] [1:1000209:1] LOCAL SCAN Nmap Scripting Engine user agent (raw TCP fallback) [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.40.129:59366 -> 192.168.40.1:3580
+10/08/2026-14:34:03.551856  [**] [1:1000210:1] LOCAL SCAN Nmap NSE probe path /nmaplowercheck [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.40.129:59366 -> 192.168.40.1:3580
+10/08/2026-14:34:03.558811  [**] [1:1000208:1] LOCAL SCAN Nmap Scripting Engine user agent [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.40.129:59378 -> 192.168.40.1:3580
+10/08/2026-14:34:03.558811  [**] [1:1000209:1] LOCAL SCAN Nmap Scripting Engine user agent (raw TCP fallback) [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.40.129:59378 -> 192.168.40.1:3580

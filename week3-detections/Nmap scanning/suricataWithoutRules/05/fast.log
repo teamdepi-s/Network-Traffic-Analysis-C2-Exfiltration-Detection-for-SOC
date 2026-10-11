@@ -1,0 +1,4 @@
+10/08/2026-17:22:39.872304  [**] [1:2200075:2] SURICATA UDPv4 invalid checksum [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {UDP} 192.168.40.129:35231 -> 192.168.40.2:53
+10/08/2026-17:22:51.716551  [**] [1:2200075:2] SURICATA UDPv4 invalid checksum [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {UDP} 192.168.40.129:33260 -> 103.97.91.223:123
+10/08/2026-17:23:20.622272  [**] [1:2200075:2] SURICATA UDPv4 invalid checksum [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {UDP} 192.168.40.129:42490 -> 103.97.91.223:123
+10/08/2026-17:23:51.706613  [**] [1:2200075:2] SURICATA UDPv4 invalid checksum [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {UDP} 192.168.40.129:42003 -> 103.97.91.223:123

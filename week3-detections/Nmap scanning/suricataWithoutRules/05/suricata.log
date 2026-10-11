@@ -1,0 +1,21 @@
+[17367 - Suricata-Main] 2026-10-10 20:00:52 Notice: suricata: This is Suricata version 8.0.7 RELEASE running in USER mode
+[17367 - Suricata-Main] 2026-10-10 20:00:52 Info: cpu: CPUs/cores online: 4
+[17367 - Suricata-Main] 2026-10-10 20:00:52 Info: suricata: Setting engine mode to IDS mode by default
+[17367 - Suricata-Main] 2026-10-10 20:00:52 Info: exception-policy: master exception-policy set to: auto
+[17367 - Suricata-Main] 2026-10-10 20:00:52 Info: suricata: Preparing unexpected signal handling
+[17367 - Suricata-Main] 2026-10-10 20:00:52 Info: logopenfile: fast output device (regular) initialized: fast.log
+[17367 - Suricata-Main] 2026-10-10 20:00:52 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[17367 - Suricata-Main] 2026-10-10 20:00:52 Info: logopenfile: stats output device (regular) initialized: stats.log
+[17367 - Suricata-Main] 2026-10-10 20:01:02 Info: detect: 2 rule files processed. 53103 rules successfully loaded, 0 rules failed, 0 rules skipped
+[17367 - Suricata-Main] 2026-10-10 20:01:02 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[17367 - Suricata-Main] 2026-10-10 20:01:02 Info: detect: 53108 signatures processed. 1248 are IP-only rules, 4540 are inspecting packet payload, 47083 inspect application layer, 110 are decoder event only
+[17367 - Suricata-Main] 2026-10-10 20:01:03 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[17458 - RX#01] 2026-10-10 20:01:03 Info: pcap: Starting file run for 05_xmas_scan.pcapng
+[17367 - Suricata-Main] 2026-10-10 20:01:03 Notice: threads: Threads created -> RX: 1 W: 4 FM: 1 FR: 1   Engine started.
+[17458 - RX#01] 2026-10-10 20:01:03 Info: checksum: No packets with invalid checksum, assuming checksum offloading is NOT used
+[17458 - RX#01] 2026-10-10 20:01:03 Info: pcap: pcap file 05_xmas_scan.pcapng end of file reached (pcap err code 0)
+[17367 - Suricata-Main] 2026-10-10 20:01:03 Notice: suricata: Signal Received.  Stopping engine.
+[17367 - Suricata-Main] 2026-10-10 20:01:03 Info: suricata: time elapsed 0.050s
+[17458 - RX#01] 2026-10-10 20:01:03 Notice: pcap: read 1 file, 2052 packets, 110908 bytes
+[17367 - Suricata-Main] 2026-10-10 20:01:03 Info: counters: Alerts: 4
+[17457 - US] 2026-10-10 20:01:03 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket' closed

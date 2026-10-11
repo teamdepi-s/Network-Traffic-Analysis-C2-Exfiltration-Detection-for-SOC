@@ -1,0 +1,23 @@
+[182215 - Suricata-Main] 2026-10-11 15:13:53 Notice: suricata: This is Suricata version 8.0.7 RELEASE running in USER mode
+[182215 - Suricata-Main] 2026-10-11 15:13:53 Info: cpu: CPUs/cores online: 4
+[182215 - Suricata-Main] 2026-10-11 15:13:53 Info: suricata: Setting engine mode to IDS mode by default
+[182215 - Suricata-Main] 2026-10-11 15:13:53 Info: exception-policy: master exception-policy set to: auto
+[182215 - Suricata-Main] 2026-10-11 15:13:53 Info: suricata: Preparing unexpected signal handling
+[182215 - Suricata-Main] 2026-10-11 15:13:53 Info: logopenfile: fast output device (regular) initialized: fast.log
+[182215 - Suricata-Main] 2026-10-11 15:13:53 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[182215 - Suricata-Main] 2026-10-11 15:13:53 Info: logopenfile: stats output device (regular) initialized: stats.log
+[182215 - Suricata-Main] 2026-10-11 15:13:53 Info: detect: 1 rule files processed. 10 rules successfully loaded, 0 rules failed, 0 rules skipped
+[182215 - Suricata-Main] 2026-10-11 15:13:53 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[182215 - Suricata-Main] 2026-10-11 15:13:53 Info: detect: 10 signatures processed. 0 are IP-only rules, 1 are inspecting packet payload, 2 inspect application layer, 0 are decoder event only
+[182215 - Suricata-Main] 2026-10-11 15:13:53 Warning: mpm-hs: Failed to create Hyperscan cache folder, make sure the  parent folder is writeable or adjust sgh-mpm-caching-path setting (/var/lib/suricata/cache/sgh)
+[182215 - Suricata-Main] 2026-10-11 15:13:53 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[182215 - Suricata-Main] 2026-10-11 15:13:53 Warning: unix-manager: Unix socket: UNIX socket bind(/var/run/suricata/suricata-command.socket) error: Permission denied
+[182215 - Suricata-Main] 2026-10-11 15:13:53 Warning: unix-manager: Unable to create unix command socket
+[182216 - RX#01] 2026-10-11 15:13:53 Info: pcap: Starting file run for 03_os_detection.pcapng
+[182215 - Suricata-Main] 2026-10-11 15:13:53 Notice: threads: Threads created -> RX: 1 W: 4 FM: 1 FR: 1   Engine started.
+[182216 - RX#01] 2026-10-11 15:13:53 Info: checksum: No packets with invalid checksum, assuming checksum offloading is NOT used
+[182216 - RX#01] 2026-10-11 15:13:53 Info: pcap: pcap file 03_os_detection.pcapng end of file reached (pcap err code 0)
+[182215 - Suricata-Main] 2026-10-11 15:13:53 Notice: suricata: Signal Received.  Stopping engine.
+[182215 - Suricata-Main] 2026-10-11 15:13:53 Info: suricata: time elapsed 0.053s
+[182216 - RX#01] 2026-10-11 15:13:53 Notice: pcap: read 1 file, 2197 packets, 132430 bytes
+[182215 - Suricata-Main] 2026-10-11 15:13:53 Info: counters: Alerts: 26

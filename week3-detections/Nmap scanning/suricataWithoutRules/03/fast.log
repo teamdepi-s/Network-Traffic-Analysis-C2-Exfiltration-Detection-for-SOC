@@ -1,0 +1,13 @@
+10/08/2026-14:51:25.073315  [**] [1:2200075:2] SURICATA UDPv4 invalid checksum [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {UDP} 192.168.40.129:44911 -> 196.49.100.57:123
+10/08/2026-14:51:54.035606  [**] [1:2200075:2] SURICATA UDPv4 invalid checksum [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {UDP} 192.168.40.129:58888 -> 196.49.100.57:123
+10/08/2026-14:52:09.592382  [**] [1:2200075:2] SURICATA UDPv4 invalid checksum [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {UDP} 192.168.40.129:38199 -> 192.168.40.2:53
+10/08/2026-14:52:14.944059  [**] [1:2200025:2] SURICATA ICMPv4 unknown code [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {ICMP} 192.168.40.129:8 -> 192.168.40.1:9
+10/08/2026-14:52:15.195881  [**] [1:2200025:2] SURICATA ICMPv4 unknown code [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {ICMP} 192.168.40.129:8 -> 192.168.40.1:9
+10/08/2026-14:52:15.422816  [**] [1:2200025:2] SURICATA ICMPv4 unknown code [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {ICMP} 192.168.40.129:8 -> 192.168.40.1:9
+10/08/2026-14:52:15.649178  [**] [1:2200025:2] SURICATA ICMPv4 unknown code [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {ICMP} 192.168.40.129:8 -> 192.168.40.1:9
+10/08/2026-14:52:17.502291  [**] [1:2200025:2] SURICATA ICMPv4 unknown code [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {ICMP} 192.168.40.129:8 -> 192.168.40.1:9
+10/08/2026-14:52:17.753925  [**] [1:2200025:2] SURICATA ICMPv4 unknown code [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {ICMP} 192.168.40.129:8 -> 192.168.40.1:9
+10/08/2026-14:52:17.981699  [**] [1:2200025:2] SURICATA ICMPv4 unknown code [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {ICMP} 192.168.40.129:8 -> 192.168.40.1:9
+10/08/2026-14:52:18.208385  [**] [1:2200025:2] SURICATA ICMPv4 unknown code [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {ICMP} 192.168.40.129:8 -> 192.168.40.1:9
+10/08/2026-14:52:25.076299  [**] [1:2200075:2] SURICATA UDPv4 invalid checksum [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {UDP} 192.168.40.129:34447 -> 196.49.100.57:123
+10/08/2026-14:52:54.034794  [**] [1:2200075:2] SURICATA UDPv4 invalid checksum [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {UDP} 192.168.40.129:47692 -> 196.49.100.57:123

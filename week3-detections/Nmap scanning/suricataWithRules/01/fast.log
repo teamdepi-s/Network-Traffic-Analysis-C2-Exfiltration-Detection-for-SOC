@@ -1,0 +1,4 @@
+10/08/2026-14:20:39.364268  [**] [1:1000204:1] LOCAL SCAN Nmap SYN probe fingerprint (window 1024) [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.40.129:50714 -> 192.168.40.1:10024
+10/08/2026-14:20:41.284873  [**] [1:1000203:1] LOCAL SCAN TCP SYN sweep (100+ SYN in 10s from one source) [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.40.129:50712 -> 192.168.40.1:306
+10/08/2026-14:20:40.179321  [**] [1:1000204:1] LOCAL SCAN Nmap SYN probe fingerprint (window 1024) [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.40.129:50714 -> 192.168.40.1:5859
+10/08/2026-14:20:41.989380  [**] [1:1000203:1] LOCAL SCAN TCP SYN sweep (100+ SYN in 10s from one source) [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.40.129:50714 -> 192.168.40.1:5960

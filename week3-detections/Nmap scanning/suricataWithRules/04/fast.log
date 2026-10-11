@@ -1,0 +1,3 @@
+10/08/2026-17:16:17.123252  [**] [1:1000201:1] LOCAL SCAN TCP NULL scan (no flags set) [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.40.129:48566 -> 192.168.40.1:8080
+10/08/2026-17:16:26.817299  [**] [1:1000201:1] LOCAL SCAN TCP NULL scan (no flags set) [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.40.129:48566 -> 192.168.40.1:5962
+10/08/2026-17:16:36.983970  [**] [1:1000201:1] LOCAL SCAN TCP NULL scan (no flags set) [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.40.129:48568 -> 192.168.40.1:9900
