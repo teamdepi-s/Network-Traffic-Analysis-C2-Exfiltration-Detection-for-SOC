@@ -1,0 +1,66 @@
+02/04/2022-20:54:12.887585  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49753 -> 194.76.227.89:443
+02/04/2022-20:56:06.861512  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49756 -> 45.41.204.156:443
+02/04/2022-21:06:30.942398  [**] [1:2033385:1] ET INFO IP Check Domain (myexternalip .com in TLS SNI) [**] [Classification: Potential Corporate Privacy Violation] [Priority: 1] {TCP} 10.2.4.101:49824 -> 34.117.59.81:443
+02/04/2022-21:06:20.107934  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49823 -> 45.41.204.156:443
+02/04/2022-21:06:54.988355  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49831 -> 45.41.204.156:443
+02/04/2022-21:15:32.532624  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49847 -> 45.41.204.156:443
+02/04/2022-21:17:02.058893  [**] [1:2260002:1] SURICATA Applayer Detect protocol only one direction [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.2.4.101:49851 -> 10.2.4.2:139
+02/04/2022-21:16:27.251532  [**] [1:2260002:1] SURICATA Applayer Detect protocol only one direction [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.2.4.101:49850 -> 10.2.4.2:139
+02/04/2022-21:17:32.076864  [**] [1:2260002:1] SURICATA Applayer Detect protocol only one direction [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.2.4.101:49853 -> 10.2.4.2:139
+02/04/2022-20:56:02.765380  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49755 -> 45.41.204.156:443
+02/04/2022-21:18:32.112252  [**] [1:2260002:1] SURICATA Applayer Detect protocol only one direction [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.2.4.101:49856 -> 10.2.4.2:139
+02/04/2022-21:21:40.187443  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49859 -> 45.41.204.156:443
+02/04/2022-20:59:03.384640  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49788 -> 45.41.204.156:443
+02/04/2022-21:06:35.883152  [**] [1:2260002:1] SURICATA Applayer Detect protocol only one direction [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.2.4.101:49825 -> 10.2.4.2:139
+02/04/2022-21:06:52.864856  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49830 -> 45.41.204.156:443
+02/04/2022-21:07:52.761666  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49835 -> 45.41.204.156:443
+02/04/2022-21:15:53.147210  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49849 -> 45.41.204.156:443
+02/04/2022-21:17:13.325294  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49852 -> 45.41.204.156:443
+02/04/2022-21:18:02.093964  [**] [1:2260002:1] SURICATA Applayer Detect protocol only one direction [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.2.4.101:49854 -> 10.2.4.2:139
+02/04/2022-21:27:22.296572  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49870 -> 45.41.204.156:443
+02/04/2022-21:24:17.305077  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49869 -> 45.41.204.156:443
+02/04/2022-21:37:02.851301  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49879 -> 45.41.204.156:443
+02/04/2022-21:22:36.963256  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49868 -> 45.41.204.156:443
+02/04/2022-21:43:14.263644  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49890 -> 45.41.204.156:443
+02/04/2022-21:42:52.718141  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49882 -> 45.41.204.156:443
+02/04/2022-21:43:12.648111  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49889 -> 45.41.204.156:443
+02/04/2022-22:02:43.508817  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49982 -> 45.41.204.156:443
+02/04/2022-21:55:24.667923  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49973 -> 45.41.204.156:443
+02/04/2022-21:53:09.393260  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49971 -> 45.41.204.156:443
+02/04/2022-21:48:54.839552  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49956 -> 45.41.204.156:443
+02/04/2022-22:20:44.969148  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49995 -> 45.41.204.156:443
+02/04/2022-21:54:37.832480  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49972 -> 45.41.204.156:443
+02/04/2022-21:59:07.778243  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49975 -> 45.41.204.156:443
+02/04/2022-22:25:13.759834  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50007 -> 45.41.204.156:443
+02/04/2022-22:34:05.539287  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50012 -> 45.41.204.156:443
+02/04/2022-22:06:50.275419  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49985 -> 45.41.204.156:443
+02/04/2022-22:12:34.359778  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:49988 -> 45.41.204.156:443
+02/04/2022-22:29:26.678745  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50008 -> 45.41.204.156:443
+02/04/2022-22:41:50.128543  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50019 -> 45.41.204.156:443
+02/04/2022-22:38:17.986258  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50016 -> 45.41.204.156:443
+02/04/2022-22:54:55.552832  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50028 -> 45.41.204.156:443
+02/04/2022-22:46:54.622772  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50023 -> 45.41.204.156:443
+02/04/2022-23:01:35.822671  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50031 -> 45.41.204.156:443
+02/04/2022-23:16:46.639219  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50051 -> 45.41.204.156:443
+02/04/2022-23:21:50.188813  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50055 -> 45.41.204.156:443
+02/04/2022-23:20:31.677384  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50054 -> 45.41.204.156:443
+02/04/2022-23:55:22.108140  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50075 -> 45.41.204.156:443
+02/04/2022-23:27:04.860278  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50058 -> 45.41.204.156:443
+02/04/2022-23:28:06.328913  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50059 -> 45.41.204.156:443
+02/05/2022-00:00:51.685662  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50089 -> 45.41.204.156:443
+02/05/2022-00:06:28.130292  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50093 -> 45.41.204.156:443
+02/05/2022-00:09:19.555744  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50099 -> 45.41.204.156:443
+02/05/2022-00:26:23.987501  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50113 -> 45.41.204.156:443
+02/05/2022-00:14:28.126944  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50106 -> 45.41.204.156:443
+02/05/2022-00:17:59.305385  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50108 -> 45.41.204.156:443
+02/04/2022-23:46:08.896169  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50070 -> 45.41.204.156:443
+02/05/2022-00:22:56.552083  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50112 -> 45.41.204.156:443
+02/04/2022-23:57:58.257921  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50078 -> 45.41.204.156:443
+02/05/2022-00:07:09.797139  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50096 -> 45.41.204.156:443
+02/04/2022-23:05:22.776440  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50032 -> 45.41.204.156:443
+02/04/2022-23:10:47.718908  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50038 -> 45.41.204.156:443
+02/04/2022-23:14:14.742770  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50045 -> 45.41.204.156:443
+02/04/2022-23:18:32.022460  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50052 -> 45.41.204.156:443
+02/04/2022-23:36:35.934546  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50065 -> 45.41.204.156:443
+02/05/2022-00:06:46.245708  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50094 -> 45.41.204.156:443
+02/05/2022-00:19:00.350601  [**] [1:2028765:2] ET JA3 Hash - [Abuse.ch] Possible Dridex [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.2.4.101:50109 -> 45.41.204.156:443

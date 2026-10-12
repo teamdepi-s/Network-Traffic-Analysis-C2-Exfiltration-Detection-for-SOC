@@ -1,0 +1,92 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	ldap_search
+#open	2026-10-08-19-37-33
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	message_id	scope	deref_aliases	base_object	result_count	result	diagnostic_message	filter	attributes
+#types	time	string	addr	port	addr	port	int	string	string	string	count	string	string	string	vector[string]
+1644000788.229757	CTiBmv3oTdeCIoEwyl	10.2.4.101	58059	10.2.4.2	389	19	base	never	-	1	success	-	(&(&(&(&(DnsDomain=bogdanovtech.com.)(Host=DESKTOP-M551AIE))(DomainGuid=99150a48-a703-4364-aac7-2bf488933d8e))(NtVer=0x00000016))(DnsHostName=DESKTOP-M551AIE.bogdanovtech.com))	-
+1644000788.379925	CoUyS9RnnRF3hLPTd	10.2.4.101	49734	10.2.4.2	389	1	base	never	-	1	success	-	(objectclass=*)	-
+1644000788.382449	CoUyS9RnnRF3hLPTd	10.2.4.101	49734	10.2.4.2	389	4	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644000788.383089	CoUyS9RnnRF3hLPTd	10.2.4.101	49734	10.2.4.2	389	5	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644000788.383541	CoUyS9RnnRF3hLPTd	10.2.4.101	49734	10.2.4.2	389	6	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644000788.388075	CeRSx81lALtdHLoIFi	10.2.4.101	49735	10.2.4.2	389	10	base	never	-	1	success	-	(ObjectClass=*)	-
+1644000788.388666	CeRSx81lALtdHLoIFi	10.2.4.101	49735	10.2.4.2	389	11	base	never	CN=62a0ff2e-97b9-4513-943f-0d221bd30080,CN=Device Registration Configuration,CN=services,CN=Configuration,DC=bogdanovtech,DC=com	0	no such object	0000208D: NameErr: DSID-03100288, problem 2001 (NO_OBJECT), data 0, best match of:??'CN=Services,CN=Configuration,DC=bogdanovtech,DC=com'??	(ObjectClass=*)	-
+1644000825.950195	C3IeSR3Pbvxv6VBV12	10.2.4.101	49744	10.2.4.2	389	1	base	never	-	1	success	-	(objectclass=*)	-
+1644000825.953086	C3IeSR3Pbvxv6VBV12	10.2.4.101	49744	10.2.4.2	389	4	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644000825.953623	C3IeSR3Pbvxv6VBV12	10.2.4.101	49744	10.2.4.2	389	5	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644000825.954015	C3IeSR3Pbvxv6VBV12	10.2.4.101	49744	10.2.4.2	389	6	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644000825.959869	CTdqLW1UpbKRAf3hUa	10.2.4.101	49745	10.2.4.2	389	10	base	never	-	1	success	-	(ObjectClass=*)	-
+1644000825.961361	CTdqLW1UpbKRAf3hUa	10.2.4.101	49745	10.2.4.2	389	11	base	never	CN=62a0ff2e-97b9-4513-943f-0d221bd30080,CN=Device Registration Configuration,CN=services,CN=Configuration,DC=bogdanovtech,DC=com	0	no such object	0000208D: NameErr: DSID-03100288, problem 2001 (NO_OBJECT), data 0, best match of:??'CN=Services,CN=Configuration,DC=bogdanovtech,DC=com'??	(ObjectClass=*)	-
+1644001225.200732	CJ3Wf11K9cHnZarTO3	10.2.4.101	52376	10.2.4.2	389	20	base	never	-	1	success	-	(&(&(&(&(DnsDomain=bogdanovtech.com.)(Host=DESKTOP-M551AIE))(DomainGuid=99150a48-a703-4364-aac7-2bf488933d8e))(NtVer=0x00000016))(DnsHostName=DESKTOP-M551AIE.bogdanovtech.com))	-
+1644001225.271559	CJ3Wf11K9cHnZarTO3	10.2.4.101	52376	10.2.4.2	389	21	base	never	-	1	success	-	(&(&(&(&(DnsDomain=bogdanovtech.com.)(Host=DESKTOP-M551AIE))(DomainGuid=99150a48-a703-4364-aac7-2bf488933d8e))(NtVer=0x20000016))(DnsHostName=DESKTOP-M551AIE.bogdanovtech.com))	-
+1644001228.427866	Cx93NP2CeGxXhaoxr5	10.2.4.101	50402	10.2.4.2	389	22	base	never	-	1	success	-	(&(&(&(&(DnsDomain=bogdanovtech.com.)(Host=DESKTOP-M551AIE))(DomainGuid=99150a48-a703-4364-aac7-2bf488933d8e))(NtVer=0x20000016))(DnsHostName=DESKTOP-M551AIE.bogdanovtech.com))	-
+1644001324.865521	C5eYgGWs3m4qH7ful	10.2.4.101	54521	10.2.4.2	389	23	base	never	-	1	success	-	(&(&(&(&(DnsDomain=bogdanovtech.com.)(Host=DESKTOP-M551AIE))(DomainGuid=99150a48-a703-4364-aac7-2bf488933d8e))(NtVer=0x20000016))(DnsHostName=DESKTOP-M551AIE.bogdanovtech.com))	-
+1644001600.652836	CmCz0H1STfED0fEam	10.2.4.101	53684	10.2.4.2	389	24	base	never	-	1	success	-	(&(&(&(&(DnsDomain=bogdanovtech.com.)(Host=DESKTOP-M551AIE))(DomainGuid=99150a48-a703-4364-aac7-2bf488933d8e))(NtVer=0x00000016))(DnsHostName=DESKTOP-M551AIE.bogdanovtech.com))	-
+1644001994.880698	CBDBX81iunBUF8aNDi	10.2.4.101	59715	10.2.4.2	389	25	base	never	-	1	success	-	(&(&(&(&(DnsDomain=bogdanovtech.com.)(Host=DESKTOP-M551AIE))(DomainGuid=99150a48-a703-4364-aac7-2bf488933d8e))(NtVer=0x00000016))(DnsHostName=DESKTOP-M551AIE.bogdanovtech.com))	-
+1644001995.022025	CWnRcc40RDmnqBdUO6	10.2.4.101	49844	10.2.4.2	389	1	base	never	-	1	success	-	(objectclass=*)	-
+1644001995.024568	CWnRcc40RDmnqBdUO6	10.2.4.101	49844	10.2.4.2	389	4	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644001995.025294	CWnRcc40RDmnqBdUO6	10.2.4.101	49844	10.2.4.2	389	5	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644001995.025836	CWnRcc40RDmnqBdUO6	10.2.4.101	49844	10.2.4.2	389	6	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644001995.032564	CXrUnd4XD7bt8CqsNi	10.2.4.101	49845	10.2.4.2	389	10	base	never	-	1	success	-	(ObjectClass=*)	-
+1644001995.033232	CXrUnd4XD7bt8CqsNi	10.2.4.101	49845	10.2.4.2	389	11	base	never	CN=62a0ff2e-97b9-4513-943f-0d221bd30080,CN=Device Registration Configuration,CN=services,CN=Configuration,DC=bogdanovtech,DC=com	0	no such object	0000208D: NameErr: DSID-03100288, problem 2001 (NO_OBJECT), data 0, best match of:??'CN=Services,CN=Configuration,DC=bogdanovtech,DC=com'??	(ObjectClass=*)	-
+1644002528.551429	CMJ8WcWCfVdn5Vwlk	10.2.4.101	49865	10.2.4.2	389	1	base	never	-	1	success	-	(objectclass=*)	-
+1644002528.554109	CMJ8WcWCfVdn5Vwlk	10.2.4.101	49865	10.2.4.2	389	4	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644002528.554652	CMJ8WcWCfVdn5Vwlk	10.2.4.101	49865	10.2.4.2	389	5	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644002528.555268	CMJ8WcWCfVdn5Vwlk	10.2.4.101	49865	10.2.4.2	389	6	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644002528.560908	CSDEnL3axTpa5s818g	10.2.4.101	49866	10.2.4.2	389	10	base	never	-	1	success	-	(ObjectClass=*)	-
+1644002528.577415	CSDEnL3axTpa5s818g	10.2.4.101	49866	10.2.4.2	389	11	base	never	CN=62a0ff2e-97b9-4513-943f-0d221bd30080,CN=Device Registration Configuration,CN=services,CN=Configuration,DC=bogdanovtech,DC=com	0	no such object	0000208D: NameErr: DSID-03100288, problem 2001 (NO_OBJECT), data 0, best match of:??'CN=Services,CN=Configuration,DC=bogdanovtech,DC=com'??	(ObjectClass=*)	-
+1644002860.077014	CMhQ6Nl0YxW44Wpoa	10.2.4.101	49873	10.2.4.2	389	1	base	never	-	1	success	-	(objectclass=*)	-
+1644002860.079470	CMhQ6Nl0YxW44Wpoa	10.2.4.101	49873	10.2.4.2	389	4	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644002860.080002	CMhQ6Nl0YxW44Wpoa	10.2.4.101	49873	10.2.4.2	389	5	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644002860.080413	CMhQ6Nl0YxW44Wpoa	10.2.4.101	49873	10.2.4.2	389	6	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644002860.085574	CNLI823tE2P5gY0VIh	10.2.4.101	49874	10.2.4.2	389	10	base	never	-	1	success	-	(ObjectClass=*)	-
+1644002860.086195	CNLI823tE2P5gY0VIh	10.2.4.101	49874	10.2.4.2	389	11	base	never	CN=62a0ff2e-97b9-4513-943f-0d221bd30080,CN=Device Registration Configuration,CN=services,CN=Configuration,DC=bogdanovtech,DC=com	0	no such object	0000208D: NameErr: DSID-03100288, problem 2001 (NO_OBJECT), data 0, best match of:??'CN=Services,CN=Configuration,DC=bogdanovtech,DC=com'??	(ObjectClass=*)	-
+1644004138.143524	CflH5f1qQQOVyQcOn7	10.2.4.101	53295	10.2.4.2	389	26	base	never	-	1	success	-	(&(&(&(&(DnsDomain=bogdanovtech.com.)(Host=DESKTOP-M551AIE))(DomainGuid=99150a48-a703-4364-aac7-2bf488933d8e))(NtVer=0x00000016))(DnsHostName=DESKTOP-M551AIE.bogdanovtech.com))	-
+1644005595.244449	CHrtDN39oIzcxsw36g	10.2.4.101	51410	10.2.4.2	389	27	base	never	-	1	success	-	(&(&(&(&(DnsDomain=bogdanovtech.com.)(Host=DESKTOP-M551AIE))(DomainGuid=99150a48-a703-4364-aac7-2bf488933d8e))(NtVer=0x00000016))(DnsHostName=DESKTOP-M551AIE.bogdanovtech.com))	-
+1644005595.382732	C32VN04IXe9YK9OMrg	10.2.4.101	51412	10.2.4.2	389	28	base	never	-	1	success	-	(&(&(&(&(DnsDomain=bogdanovtech.com.)(Host=DESKTOP-M551AIE))(DomainGuid=99150a48-a703-4364-aac7-2bf488933d8e))(NtVer=0x20000016))(DnsHostName=DESKTOP-M551AIE.bogdanovtech.com))	-
+1644005595.490501	CZmj2l2q3FVV6kLk58	10.2.4.101	49991	10.2.4.2	389	1	base	never	-	1	success	-	(objectclass=*)	-
+1644005595.493287	CZmj2l2q3FVV6kLk58	10.2.4.101	49991	10.2.4.2	389	4	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644005595.493920	CZmj2l2q3FVV6kLk58	10.2.4.101	49991	10.2.4.2	389	5	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644005595.494475	CZmj2l2q3FVV6kLk58	10.2.4.101	49991	10.2.4.2	389	6	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644005595.502426	CODkGqFjp0loIkfL8	10.2.4.101	49992	10.2.4.2	389	10	base	never	-	1	success	-	(ObjectClass=*)	-
+1644005595.503107	CODkGqFjp0loIkfL8	10.2.4.101	49992	10.2.4.2	389	11	base	never	CN=62a0ff2e-97b9-4513-943f-0d221bd30080,CN=Device Registration Configuration,CN=services,CN=Configuration,DC=bogdanovtech,DC=com	0	no such object	0000208D: NameErr: DSID-03100288, problem 2001 (NO_OBJECT), data 0, best match of:??'CN=Services,CN=Configuration,DC=bogdanovtech,DC=com'??	(ObjectClass=*)	-
+1644006301.578030	C0UjKu2kXPJEjpyJOe	10.2.4.101	50001	10.2.4.2	389	1	base	never	-	1	success	-	(objectclass=*)	-
+1644006301.591871	C0Wn492assi8gvfYba	10.2.4.101	60453	10.2.4.2	389	29	base	never	-	1	success	-	(&(&(&(&(&(DnsDomain=bogdanovtech.com.)(Host=DESKTOP-M551AIE))(DomainSid=S-1-5-21-717294016-3909786879-2317807577))(DomainGuid=99150a48-a703-4364-aac7-2bf488933d8e))(NtVer=0x20000016))(DnsHostName=DESKTOP-M551AIE.bogdanovtech.com))	-
+1644006301.712635	C0UjKu2kXPJEjpyJOe	10.2.4.101	50001	10.2.4.2	389	4	tree	never	DC=bogdanovtech,DC=com	1	success	-	(|(distinguishedName=DC=bogdanovtech,DC=com))	-
+1644006301.718118	CeQEdG1kfGZpEY7UPc	10.2.4.101	50002	10.2.4.2	389	8	base	never	-	1	success	-	(objectClass=*)	-
+1644006301.718646	CeQEdG1kfGZpEY7UPc	10.2.4.101	50002	10.2.4.2	389	9	base	never	CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=bogdanovtech,DC=com	1	success	-	(objectClass=*)	-
+1644006301.719570	C0UjKu2kXPJEjpyJOe	10.2.4.101	50001	10.2.4.2	389	10	tree	never	cn=policies,cn=system,DC=bogdanovtech,DC=com	1	success	-	(&(&(!(flags:1.2.840.113556.1.4.803:=2))(gPCMachineExtensionNames=[*]))(|(distinguishedName=CN={31B2F340-016D-11D2-945F-00C04FB984F9},CN=Policies,CN=System,DC=bogdanovtech,DC=com)))	-
+1644006308.499593	CPRkVA3JRmnCgUEWz4	10.2.4.101	50005	10.2.4.2	389	16	tree	never	DC=bogdanovtech,DC=com	1	success	-	(|(distinguishedName=DC=bogdanovtech,DC=com))	-
+1644006308.504980	ChiIjo4WC08UGXkd6i	10.2.4.101	50006	10.2.4.2	389	20	base	never	-	1	success	-	(objectClass=*)	-
+1644006308.505536	ChiIjo4WC08UGXkd6i	10.2.4.101	50006	10.2.4.2	389	21	base	never	CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=bogdanovtech,DC=com	1	success	-	(objectClass=*)	-
+1644006308.506119	CPRkVA3JRmnCgUEWz4	10.2.4.101	50005	10.2.4.2	389	22	tree	never	cn=policies,cn=system,DC=bogdanovtech,DC=com	0	success	-	(&(&(!(flags:1.2.840.113556.1.4.803:=1))(gPCUserExtensionNames=[*]))(|(distinguishedName=CN={31B2F340-016D-11D2-945F-00C04FB984F9},CN=Policies,CN=System,DC=bogdanovtech,DC=com)))	-
+1644009195.281357	CgLScG1fjBlRlUC2Y9	10.2.4.101	53647	10.2.4.2	389	30	base	never	-	1	success	-	(&(&(&(&(DnsDomain=bogdanovtech.com.)(Host=DESKTOP-M551AIE))(DomainGuid=99150a48-a703-4364-aac7-2bf488933d8e))(NtVer=0x00000016))(DnsHostName=DESKTOP-M551AIE.bogdanovtech.com))	-
+1644009195.415933	ChpbDs4X3YSqrREC2i	10.2.4.101	53649	10.2.4.2	389	31	base	never	-	1	success	-	(&(&(&(&(DnsDomain=bogdanovtech.com.)(Host=DESKTOP-M551AIE))(DomainGuid=99150a48-a703-4364-aac7-2bf488933d8e))(NtVer=0x20000016))(DnsHostName=DESKTOP-M551AIE.bogdanovtech.com))	-
+1644009195.545173	C8uMYJ2irOBbaKatN1	10.2.4.101	50042	10.2.4.2	389	1	base	never	-	1	success	-	(objectclass=*)	-
+1644009195.548446	C8uMYJ2irOBbaKatN1	10.2.4.101	50042	10.2.4.2	389	4	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644009195.549077	C8uMYJ2irOBbaKatN1	10.2.4.101	50042	10.2.4.2	389	5	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644009195.549674	C8uMYJ2irOBbaKatN1	10.2.4.101	50042	10.2.4.2	389	6	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644009195.555985	CRqBk43bPEwvNK3Jc5	10.2.4.101	50043	10.2.4.2	389	10	base	never	-	1	success	-	(ObjectClass=*)	-
+1644009195.556908	CRqBk43bPEwvNK3Jc5	10.2.4.101	50043	10.2.4.2	389	11	base	never	CN=62a0ff2e-97b9-4513-943f-0d221bd30080,CN=Device Registration Configuration,CN=services,CN=Configuration,DC=bogdanovtech,DC=com	0	no such object	0000208D: NameErr: DSID-03100288, problem 2001 (NO_OBJECT), data 0, best match of:??'CN=Services,CN=Configuration,DC=bogdanovtech,DC=com'??	(ObjectClass=*)	-
+1644011883.273094	CdxqIz24wIKgaIg1Jg	10.2.4.101	49959	10.2.4.2	389	32	base	never	-	1	success	-	(&(&(&(&(DnsDomain=bogdanovtech.com.)(Host=DESKTOP-M551AIE))(DomainGuid=99150a48-a703-4364-aac7-2bf488933d8e))(NtVer=0x20000016))(DnsHostName=DESKTOP-M551AIE.bogdanovtech.com))	-
+1644011883.597531	C6fcVj2VbLgDPJgU9	10.2.4.101	50081	10.2.4.2	389	1	base	never	-	1	success	-	(objectclass=*)	-
+1644011883.614912	C6fcVj2VbLgDPJgU9	10.2.4.101	50081	10.2.4.2	389	4	tree	never	DC=bogdanovtech,DC=com	1	success	-	(|(distinguishedName=DC=bogdanovtech,DC=com))	-
+1644011883.617612	CSmtAw4O88gLki46uh	10.2.4.101	49231	10.2.4.2	389	33	base	never	-	1	success	-	(&(&(&(&(DnsDomain=bogdanovtech.com)(Host=DESKTOP-M551AIE))(DomainGuid=99150a48-a703-4364-aac7-2bf488933d8e))(NtVer=0x20000016))(DnsHostName=DESKTOP-M551AIE.bogdanovtech.com))	-
+1644011883.750865	C97uKh15s8P3DdAZ5k	10.2.4.101	50082	10.2.4.2	389	8	base	never	-	1	success	-	(objectClass=*)	-
+1644011883.751539	C97uKh15s8P3DdAZ5k	10.2.4.101	50082	10.2.4.2	389	9	base	never	CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=bogdanovtech,DC=com	1	success	-	(objectClass=*)	-
+1644011883.752830	C6fcVj2VbLgDPJgU9	10.2.4.101	50081	10.2.4.2	389	10	tree	never	cn=policies,cn=system,DC=bogdanovtech,DC=com	1	success	-	(&(&(!(flags:1.2.840.113556.1.4.803:=2))(gPCMachineExtensionNames=[*]))(|(distinguishedName=CN={31B2F340-016D-11D2-945F-00C04FB984F9},CN=Policies,CN=System,DC=bogdanovtech,DC=com)))	-
+1644011889.952681	C2uUr93OMUryZRDeC6	10.2.4.101	49232	10.2.4.2	389	34	base	never	-	1	success	-	(&(&(&(&(&(DnsDomain=bogdanovtech.com.)(Host=DESKTOP-M551AIE))(DomainSid=S-1-5-21-717294016-3909786879-2317807577))(DomainGuid=99150a48-a703-4364-aac7-2bf488933d8e))(NtVer=0x00000016))(DnsHostName=DESKTOP-M551AIE.bogdanovtech.com))	-
+1644011890.382116	CP0W0X2CKFLplYBpKl	10.2.4.101	50085	10.2.4.2	389	16	tree	never	DC=bogdanovtech,DC=com	1	success	-	(|(distinguishedName=DC=bogdanovtech,DC=com))	-
+1644011890.388076	CpDcIb4F52ciPHczs2	10.2.4.101	50086	10.2.4.2	389	20	base	never	-	1	success	-	(objectClass=*)	-
+1644011890.388771	CpDcIb4F52ciPHczs2	10.2.4.101	50086	10.2.4.2	389	21	base	never	CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=bogdanovtech,DC=com	1	success	-	(objectClass=*)	-
+1644011890.389496	CP0W0X2CKFLplYBpKl	10.2.4.101	50085	10.2.4.2	389	22	tree	never	cn=policies,cn=system,DC=bogdanovtech,DC=com	0	success	-	(&(&(!(flags:1.2.840.113556.1.4.803:=1))(gPCUserExtensionNames=[*]))(|(distinguishedName=CN={31B2F340-016D-11D2-945F-00C04FB984F9},CN=Policies,CN=System,DC=bogdanovtech,DC=com)))	-
+1644012795.307214	C6SS0E3UynEp4bIDg4	10.2.4.101	58171	10.2.4.2	389	35	base	never	-	1	success	-	(&(&(&(&(DnsDomain=bogdanovtech.com.)(Host=DESKTOP-M551AIE))(DomainGuid=99150a48-a703-4364-aac7-2bf488933d8e))(NtVer=0x00000016))(DnsHostName=DESKTOP-M551AIE.bogdanovtech.com))	-
+1644012795.444188	CsIT7u3gZUwMGqnX64	10.2.4.101	50102	10.2.4.2	389	1	base	never	-	1	success	-	(objectclass=*)	-
+1644012795.447094	CsIT7u3gZUwMGqnX64	10.2.4.101	50102	10.2.4.2	389	4	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644012795.447626	CsIT7u3gZUwMGqnX64	10.2.4.101	50102	10.2.4.2	389	5	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644012795.448137	CsIT7u3gZUwMGqnX64	10.2.4.101	50102	10.2.4.2	389	6	base	never	CN=DESKTOP-M551AIE,CN=Computers,DC=bogdanovtech,DC=com	1	success	-	(objectclass=*)	-
+1644012795.453809	CasDWYLW2DKQ3REZ6	10.2.4.101	50103	10.2.4.2	389	10	base	never	-	1	success	-	(ObjectClass=*)	-
+1644012795.454536	CasDWYLW2DKQ3REZ6	10.2.4.101	50103	10.2.4.2	389	11	base	never	CN=62a0ff2e-97b9-4513-943f-0d221bd30080,CN=Device Registration Configuration,CN=services,CN=Configuration,DC=bogdanovtech,DC=com	0	no such object	0000208D: NameErr: DSID-03100288, problem 2001 (NO_OBJECT), data 0, best match of:??'CN=Services,CN=Configuration,DC=bogdanovtech,DC=com'??	(ObjectClass=*)	-
+#close	2026-10-08-19-37-33

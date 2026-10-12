@@ -1,0 +1,35 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	files
+#open	2026-10-08-19-37-33
+#fields	ts	fuid	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	source	depth	analyzers	mime_type	filename	duration	local_orig	is_orig	seen_bytes	total_bytes	missing_bytes	overflow_bytes	timedout	parent_fuid	md5	sha1	sha256	extracted	extracted_cutoff	extracted_size
+#types	time	string	string	addr	port	addr	port	string	count	set[string]	string	string	interval	bool	bool	count	count	count	count	bool	string	string	string	string	string	bool	count
+1644000793.057097	FrMETqEuCUJvY6CS4	CMg12G1YBm4EtlHXG1	10.2.4.101	49740	23.218.209.163	443	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	F	F	1742	-	0	0	F	-	-	-	-	-	-	-
+1644000828.867045	FIRVSQ2oFP9pjf35nj	Cpzhah1qPyFUXItWM4	10.2.4.101	49750	20.190.160.6	443	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	F	F	471	-	0	0	F	-	-	-	-	-	-	-
+1644001009.097381	FKeccl4K0lSUXJuIkh	CcEN1a2urIC1wB8uxi	10.2.4.101	49760	20.190.159.136	443	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	F	F	471	-	0	0	F	-	-	-	-	-	-	-
+1644001009.212582	FOt5yQUEvwlWA4Lb6	CbdufO1AbwfRQXzUF7	10.2.4.101	49762	20.190.159.136	443	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	F	F	471	-	0	0	F	-	-	-	-	-	-	-
+1644001009.827137	FeP82l47oND6CjrfAa	CvQf7z3WDtrOslL1zb	10.2.4.101	49763	52.109.76.40	443	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	F	F	1742	-	0	0	F	-	-	-	-	-	-	-
+1644001040.523951	Fnt0U13kD1iAkWKuoi	CS0gPi2AQ6UzERyUd8	10.2.4.101	49770	20.50.80.209	443	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	F	F	1727	-	0	0	F	-	-	-	-	-	-	-
+1644001047.150658	FTx0c3DfeK8aM83qe	Cv7W6l4tN9Ev1GB2dh	10.2.4.101	49773	23.67.131.191	443	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	F	F	1742	-	0	0	F	-	-	-	-	-	-	-
+1644001047.941976	F0AZUs2AEc5gIZ9nBf	C9K4AL3egIJLEi6iJh	10.2.4.101	49774	23.67.131.191	443	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	F	F	1742	-	0	0	F	-	-	-	-	-	-	-
+1644001050.052625	FkmfRx1wpIgoK4kMEa	CpYqOm3T6P2eUHQar	10.2.4.101	49776	20.190.159.136	443	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	F	F	471	-	0	0	F	-	-	-	-	-	-	-
+1644001051.185043	FiCDPZ31LgiSbhFUoh	CpCeeM1IWTyvropZm1	10.2.4.101	49779	20.190.159.136	443	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	F	F	471	-	0	0	F	-	-	-	-	-	-	-
+1644001080.127102	FT5bCu3pA0Wum632e8	C8v1s71fV0Nb2daDci	10.2.4.101	49785	13.107.42.16	443	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	F	F	1742	-	0	0	F	-	-	-	-	-	-	-
+1644001365.564172	FPNNHH1K7RUqcw2Vaj	CDiIiL1p6MJBw04Si5	10.2.4.101	49808	184.31.137.26	443	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	F	F	1742	-	0	0	F	-	-	-	-	-	-	-
+1644001612.207659	FHxIxgfJCwcnxJWKb	Cr33s744QCueBAHfMg	10.2.4.101	49829	40.90.64.59	443	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	F	F	1763	-	0	0	F	-	-	-	-	-	-	-
+1644001629.792501	FHvWBw1z6CqY0s0Cy7	CCcyShw8XNIfS2KIb	10.2.4.101	49833	52.109.6.42	443	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	F	F	1742	-	0	0	F	-	-	-	-	-	-	-
+1644001630.188864	F1seES2awm7PG0a9Hd	CmSYqP1JrV5HwamxC7	10.2.4.101	49834	52.113.194.132	443	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	F	F	1763	-	0	0	F	-	-	-	-	-	-	-
+1644002291.388314	Fi4uOJ3TK2DnffwDrc	CIxma84aI2N8A2y1Hg	10.2.4.101	49855	52.109.8.21	443	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	F	F	1742	-	0	0	F	-	-	-	-	-	-	-
+1644004752.753248	Ff6JEzQaqukA2DWgj	CFB5FI2RMDOd2wUfA6	10.2.4.101	49979	104.97.192.38	443	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	F	F	1742	-	0	0	F	-	-	-	-	-	-	-
+1644006302.035742	Fo2UVw1BMlFBiaDlS	Cbe4ch4KpEe0BUTVz1	10.2.4.101	50003	10.2.4.2	445	SMB	0	(empty)	text/ini	bogdanovtech.com\\Policies\\{31B2F340-016D-11D2-945F-00C04FB984F9}\\gpt.ini	0.000000	T	F	22	22	0	0	F	-	-	-	-	-	-	-
+1644006302.052332	FxasS2WQU6m6gi9nd	Cbe4ch4KpEe0BUTVz1	10.2.4.101	50003	10.2.4.2	445	SMB	0	(empty)	text/ini	bogdanovtech.com\\Policies\\{31B2F340-016D-11D2-945F-00C04FB984F9}\\Machine\\Microsoft\\Windows NT\\SecEdit\\GptTmpl.inf	0.000000	T	F	1098	1098	0	0	F	-	-	-	-	-	-	-
+1644006302.057861	FgoTVnupi5eEIqbHd	Cbe4ch4KpEe0BUTVz1	10.2.4.101	50003	10.2.4.2	445	SMB	0	(empty)	application/vnd.ms-pol	bogdanovtech.com\\Policies\\{31B2F340-016D-11D2-945F-00C04FB984F9}\\Machine\\Registry.pol	0.000000	T	F	2800	2800	0	0	F	-	-	-	-	-	-	-
+1644006302.063057	Fo2UVw1BMlFBiaDlS	Cbe4ch4KpEe0BUTVz1	10.2.4.101	50003	10.2.4.2	445	SMB	0	(empty)	text/ini	bogdanovtech.com\\Policies\\{31B2F340-016D-11D2-945F-00C04FB984F9}\\gpt.ini	0.000000	T	F	22	22	0	0	F	-	-	-	-	-	-	-
+1644009565.367052	FtIELruyg7sk4YRSk	CC03z42MnOGN0wXpx	10.2.4.101	50053	52.109.76.32	443	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	F	F	1742	-	0	0	F	-	-	-	-	-	-	-
+1644011884.075936	Fo2UVw1BMlFBiaDlS	C0jaOP2wjI5P8G9P38	10.2.4.101	50083	10.2.4.2	445	SMB	0	(empty)	text/ini	bogdanovtech.com\\Policies\\{31B2F340-016D-11D2-945F-00C04FB984F9}\\gpt.ini	0.000000	T	F	22	22	0	0	F	-	-	-	-	-	-	-
+1644011884.094039	FxasS2WQU6m6gi9nd	C0jaOP2wjI5P8G9P38	10.2.4.101	50083	10.2.4.2	445	SMB	0	(empty)	text/ini	bogdanovtech.com\\Policies\\{31B2F340-016D-11D2-945F-00C04FB984F9}\\Machine\\Microsoft\\Windows NT\\SecEdit\\GptTmpl.inf	0.000000	T	F	1098	1098	0	0	F	-	-	-	-	-	-	-
+1644011884.101738	FgoTVnupi5eEIqbHd	C0jaOP2wjI5P8G9P38	10.2.4.101	50083	10.2.4.2	445	SMB	0	(empty)	application/vnd.ms-pol	bogdanovtech.com\\Policies\\{31B2F340-016D-11D2-945F-00C04FB984F9}\\Machine\\Registry.pol	0.000000	T	F	2800	2800	0	0	F	-	-	-	-	-	-	-
+1644011884.108232	Fo2UVw1BMlFBiaDlS	C0jaOP2wjI5P8G9P38	10.2.4.101	50083	10.2.4.2	445	SMB	0	(empty)	text/ini	bogdanovtech.com\\Policies\\{31B2F340-016D-11D2-945F-00C04FB984F9}\\gpt.ini	0.000000	T	F	22	22	0	0	F	-	-	-	-	-	-	-
+#close	2026-10-08-19-37-33

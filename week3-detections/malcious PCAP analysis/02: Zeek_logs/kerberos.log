@@ -1,0 +1,30 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	kerberos
+#open	2026-10-08-19-37-33
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	request_type	client	service	success	error_msg	from	till	cipher	forwardable	renewable	client_cert_subject	client_cert_fuid	server_cert_subject	server_cert_fuid
+#types	time	string	addr	port	addr	port	string	string	string	bool	string	time	time	string	bool	bool	string	string	string	string
+1644001078.783336	C5KtOs2AbRpLLlhw8g	10.2.4.101	49784	10.2.4.2	88	TGS	DESKTOP-M551AIE$/BOGDANOVTECH.COM	cifs/BOGDANOVTECH-DC.bogdanovtech.com	T	-	-	2136422885.000000	aes256-cts-hmac-sha1-96	T	T	-	-	-	-
+1644001078.784876	Cp201l4g0paWsGLl71	10.2.4.101	49783	10.2.4.2	445	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+1644001228.488173	CVaU9j60PrCHRS60g	10.2.4.101	49790	10.2.4.2	445	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+1644001600.763116	C6BmW836gZTCngpWzc	10.2.4.101	49826	10.2.4.2	445	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+1644002128.481616	C4wFv33LJx4g6Ez9Z6	10.2.4.101	49846	10.2.4.2	445	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+1644003028.505192	CjETmF3uHbJi0Ow0sd	10.2.4.101	49877	10.2.4.2	445	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+1644003928.515329	Credeg4gzRvOGP0uM8	10.2.4.101	49916	10.2.4.2	445	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+1644004138.270339	Cf72eFZ6NlK1Zf6T3	10.2.4.101	49958	10.2.4.2	445	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+1644004159.833828	CAVLJXk7OaNoA68Uj	10.2.4.101	49964	10.2.4.2	445	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+1644004828.539170	CVSagZ1BJ2o6Simc3f	10.2.4.101	49981	10.2.4.2	445	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+1644005728.530770	CyNhx17kGKk3tvnuk	10.2.4.101	49994	10.2.4.2	445	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+1644006302.031365	Cbe4ch4KpEe0BUTVz1	10.2.4.101	50003	10.2.4.2	445	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+1644006628.553471	CBJN2o22nv03cHDmu1	10.2.4.101	50009	10.2.4.2	445	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+1644007528.566746	C5G4m7LXXMMrzDuX	10.2.4.101	50020	10.2.4.2	445	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+1644008428.588168	CEkZOK1B0n93w6m8Hd	10.2.4.101	50030	10.2.4.2	445	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+1644009328.598358	CIF9ml4jz3VCZXeymd	10.2.4.101	50048	10.2.4.2	445	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+1644010228.620445	CvTc4V2FtkNzsMCgY7	10.2.4.101	50060	10.2.4.2	445	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+1644011128.613581	CZX5D83tjMCXUSzWGa	10.2.4.101	50069	10.2.4.2	445	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+1644011884.070562	C0jaOP2wjI5P8G9P38	10.2.4.101	50083	10.2.4.2	445	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+1644012928.643390	C2ZIQEvMf6EMFfEDj	10.2.4.101	50107	10.2.4.2	445	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+1644013828.668976	CyWF6c15ZO6N0Cgne9	10.2.4.101	50118	10.2.4.2	445	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+#close	2026-10-08-19-37-33

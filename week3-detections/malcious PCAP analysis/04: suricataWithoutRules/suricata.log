@@ -1,0 +1,23 @@
+[199187 - Suricata-Main] 2026-10-08 21:43:32 Notice: suricata: This is Suricata version 8.0.7 RELEASE running in USER mode
+[199187 - Suricata-Main] 2026-10-08 21:43:32 Info: cpu: CPUs/cores online: 4
+[199187 - Suricata-Main] 2026-10-08 21:43:32 Info: suricata: Setting engine mode to IDS mode by default
+[199187 - Suricata-Main] 2026-10-08 21:43:32 Info: exception-policy: master exception-policy set to: auto
+[199187 - Suricata-Main] 2026-10-08 21:43:32 Info: suricata: Preparing unexpected signal handling
+[199187 - Suricata-Main] 2026-10-08 21:43:32 Info: logopenfile: fast output device (regular) initialized: fast.log
+[199187 - Suricata-Main] 2026-10-08 21:43:32 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[199187 - Suricata-Main] 2026-10-08 21:43:32 Info: logopenfile: stats output device (regular) initialized: stats.log
+[199187 - Suricata-Main] 2026-10-08 21:43:50 Info: detect: 1 rule files processed. 53098 rules successfully loaded, 0 rules failed, 0 rules skipped
+[199187 - Suricata-Main] 2026-10-08 21:43:50 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[199187 - Suricata-Main] 2026-10-08 21:43:50 Info: detect: 53103 signatures processed. 1248 are IP-only rules, 4540 are inspecting packet payload, 47079 inspect application layer, 110 are decoder event only
+[199187 - Suricata-Main] 2026-10-08 21:44:03 Warning: mpm-hs: Failed to create Hyperscan cache folder, make sure the  parent folder is writeable or adjust sgh-mpm-caching-path setting (/var/lib/suricata/cache/sgh)
+[199187 - Suricata-Main] 2026-10-08 21:44:03 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[199187 - Suricata-Main] 2026-10-08 21:44:03 Warning: unix-manager: Unix socket: UNIX socket bind(/var/run/suricata/suricata-command.socket) error: Permission denied
+[199187 - Suricata-Main] 2026-10-08 21:44:03 Warning: unix-manager: Unable to create unix command socket
+[199187 - Suricata-Main] 2026-10-08 21:44:03 Notice: threads: Threads created -> RX: 1 W: 4 FM: 1 FR: 1   Engine started.
+[199490 - RX#01] 2026-10-08 21:44:03 Info: pcap: Starting file run for 2022-02-04-BazarLoader-infection-with-Cobalt-Strike.pcap
+[199490 - RX#01] 2026-10-08 21:44:03 Info: checksum: No packets with invalid checksum, assuming checksum offloading is NOT used
+[199490 - RX#01] 2026-10-08 21:44:04 Info: pcap: pcap file 2022-02-04-BazarLoader-infection-with-Cobalt-Strike.pcap end of file reached (pcap err code 0)
+[199187 - Suricata-Main] 2026-10-08 21:44:04 Notice: suricata: Signal Received.  Stopping engine.
+[199187 - Suricata-Main] 2026-10-08 21:44:04 Info: suricata: time elapsed 0.547s
+[199490 - RX#01] 2026-10-08 21:44:04 Notice: pcap: read 1 file, 14476 packets, 6824864 bytes
+[199187 - Suricata-Main] 2026-10-08 21:44:04 Info: counters: Alerts: 66

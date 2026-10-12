@@ -1,0 +1,15 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	ntlm
+#open	2026-10-08-19-37-33
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	username	hostname	domainname	server_nb_computer_name	server_dns_computer_name	server_tree_name	success
+#types	time	string	addr	port	addr	port	string	string	string	string	string	string	bool
+1644001595.883152	CuHJOh18aJvfRz074h	10.2.4.101	49825	10.2.4.2	139	-	DESKTOP-M551AIE	-	BOGDANOVTECH-DC	BOGDANOVTECH-DC.bogdanovtech.com	bogdanovtech.com	T
+1644002187.251532	CKiFh44Myd2iMmIbod	10.2.4.101	49850	10.2.4.2	139	-	DESKTOP-M551AIE	-	BOGDANOVTECH-DC	BOGDANOVTECH-DC.bogdanovtech.com	bogdanovtech.com	T
+1644002222.058893	CFp8bm30StgY1Bsb39	10.2.4.101	49851	10.2.4.2	139	-	DESKTOP-M551AIE	-	BOGDANOVTECH-DC	BOGDANOVTECH-DC.bogdanovtech.com	bogdanovtech.com	T
+1644002252.076864	Ce67llkncDfRk8Lcf	10.2.4.101	49853	10.2.4.2	139	-	DESKTOP-M551AIE	-	BOGDANOVTECH-DC	BOGDANOVTECH-DC.bogdanovtech.com	bogdanovtech.com	T
+1644002282.093964	C0UOJv2CzvtqHm0JU6	10.2.4.101	49854	10.2.4.2	139	-	DESKTOP-M551AIE	-	BOGDANOVTECH-DC	BOGDANOVTECH-DC.bogdanovtech.com	bogdanovtech.com	T
+1644002312.112252	C4uuxX9HTzwl9cHvk	10.2.4.101	49856	10.2.4.2	139	-	DESKTOP-M551AIE	-	BOGDANOVTECH-DC	BOGDANOVTECH-DC.bogdanovtech.com	bogdanovtech.com	T
+#close	2026-10-08-19-37-33

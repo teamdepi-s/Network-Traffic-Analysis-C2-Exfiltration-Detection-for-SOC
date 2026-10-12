@@ -1,0 +1,29 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	weird
+#open	2026-10-08-19-37-33
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	name	addl	notice	peer	source
+#types	time	string	addr	port	addr	port	string	string	bool	string	string
+1644000790.466498	CeJ6EyzbfDmX7ume7	10.2.4.101	49738	10.2.4.2	49667	netlogon_dce_rpc_auth_type	68	F	zeek	DCE_RPC
+1644001078.771447	CaYS78xUwXS7Gm6g2	10.2.4.101	49782	10.2.4.2	49667	netlogon_dce_rpc_auth_type	68	F	zeek	DCE_RPC
+1644001230.282681	CodWPK3VT2eqJGiuzh	10.2.4.101	59482	10.2.4.2	53	DNS_unknown_opcode	5	F	zeek	DNS
+1644001602.775235	CBwfCE287NZK9FbIH4	10.2.4.101	49828	10.2.4.2	49672	netlogon_dce_rpc_auth_type	68	F	zeek	DCE_RPC
+1644002124.429767	CZVDpu2HRcBFsGoP3i	10.2.4.101	61544	10.2.4.2	53	DNS_unknown_opcode	5	F	zeek	DNS
+1644003024.473336	CSNDNb3Djy050UBMg	10.2.4.101	56328	10.2.4.2	53	DNS_unknown_opcode	5	F	zeek	DNS
+1644003924.490369	CTuscp36dIqMoDQ0Xg	10.2.4.101	59879	10.2.4.2	53	DNS_unknown_opcode	5	F	zeek	DNS
+1644004824.532361	CdUBHk4fFuDmPPjtZk	10.2.4.101	60782	10.2.4.2	53	DNS_unknown_opcode	5	F	zeek	DNS
+1644005724.526649	CAIRtTxrIvgOMbGl3	10.2.4.101	61507	10.2.4.2	53	DNS_unknown_opcode	5	F	zeek	DNS
+1644006308.186321	Cxga203O3cwjd795ic	10.2.4.101	50004	10.2.4.2	49672	netlogon_dce_rpc_auth_type	68	F	zeek	DCE_RPC
+1644006624.562248	CXjCaZTGfTVsDuXn1	10.2.4.101	59278	10.2.4.2	53	DNS_unknown_opcode	5	F	zeek	DNS
+1644007524.604468	C7ei2QAIYLxyfpDn3	10.2.4.101	50939	10.2.4.2	53	DNS_unknown_opcode	5	F	zeek	DNS
+1644008424.675336	CJhmci1d9ed04W358d	10.2.4.101	50550	10.2.4.2	53	DNS_unknown_opcode	5	F	zeek	DNS
+1644009324.717827	CoLi5P2Rc83Zv5g01	10.2.4.101	61433	10.2.4.2	53	DNS_unknown_opcode	5	F	zeek	DNS
+1644010224.757223	CFarLu46yq2qUhKVDe	10.2.4.101	50862	10.2.4.2	53	DNS_unknown_opcode	5	F	zeek	DNS
+1644011124.776349	CarVOy4Q1kQLqGZJSl	10.2.4.101	56602	10.2.4.2	53	DNS_unknown_opcode	5	F	zeek	DNS
+1644011890.062299	CeFQOP28kAUuoweWnf	10.2.4.101	50084	10.2.4.2	49672	netlogon_dce_rpc_auth_type	68	F	zeek	DCE_RPC
+1644012024.829113	Cke1O41ZvQSWQ9Ddf1	10.2.4.101	57632	10.2.4.2	53	DNS_unknown_opcode	5	F	zeek	DNS
+1644012924.857008	CSZyOj1jerUa6VgjCb	10.2.4.101	52178	10.2.4.2	53	DNS_unknown_opcode	5	F	zeek	DNS
+1644013824.911355	Ci8ZY82ENMWHG3Cfwj	10.2.4.101	51227	10.2.4.2	53	DNS_unknown_opcode	5	F	zeek	DNS
+#close	2026-10-08-19-37-33

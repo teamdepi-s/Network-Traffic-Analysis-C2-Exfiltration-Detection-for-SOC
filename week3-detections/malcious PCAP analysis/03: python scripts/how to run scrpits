@@ -1,0 +1,10 @@
+to run the scripts:
+  open the terminal in the same folder and use this commands :
+  1 : run beacon_detect:
+       python3 beacon_detect.py conn.log 
+  2 : run dga_detect: 
+       python3 dga_detect.py dns.log 
+       
+after apply this commands you can see the output of them
+
+thanks for reading.
