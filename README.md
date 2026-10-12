@@ -322,7 +322,7 @@ Documented hallucinations and misclassifications are included deliberately, to s
 
 - [ ] **Week 1:** Foundations & capture
 - [x] **Week 2:** Protocol analysis & anomaly identification
-- [ ] **Week 3:** Recon, C2 & exfiltration detection
+- [x] **Week 3:** Recon, C2 & exfiltration detection
 - [ ] **Week 4:** AI-assisted triage & final report
 
 <a id="section-14"></a>
