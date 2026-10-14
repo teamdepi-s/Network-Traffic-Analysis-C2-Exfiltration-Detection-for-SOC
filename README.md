@@ -154,15 +154,15 @@ network-threat-detection-soc/
 |   |   └── report/                  # Final report and Nmap results summary
 |   |
 |   └── Malicious PCAP analysis/     # Beaconing, DGA, exfiltration, web shell analysis
-│       ├── PCAP/                        # malicious pcap which we analyzed
-│       ├── Zeek logs/                   # all log files(conn.log, dns.log, backet filter.log, etc..)
+│       ├── PCAP/                    # malicious pcap which we analyzed
+│       ├── Zeek logs/               # all log files(conn.log, dns.log, backet filter.log, etc..)
 │       ├── python scripts/   
-│       │   ├── beacon_detect.py         # Interval-regularity beacon detector
-│       │   └── dga_entropy.py           # Domain entropy scoring
-│       ├── suricataWithoutRules/        # Suricata logs from the default ruleset (no scan alerts)
-│       ├── suricataWithRules/           # Suricata logs with the scan-detection rules (all scans detected)
-|       |   └── custom.rules             # rules applied to for suricata
-|       └── analysis report/             # final report and analysis summary
+│       │   ├── beacon_detect.py     # Interval-regularity beacon detector
+│       │   └── dga_entropy.py       # Domain entropy scoring
+│       ├── suricataWithoutRules/    # Suricata logs from the default ruleset (no scan alerts)
+│       ├── suricataWithRules/       # Suricata logs with the scan-detection rules (all scans detected)
+|       |   └── custom.rules         # rules applied to for suricata
+|       └── analysis report/         # final report and analysis summary
 │
 ├── week4-ai-triage/
 │   ├── prompt-library.md            # Reusable, categorized prompts
