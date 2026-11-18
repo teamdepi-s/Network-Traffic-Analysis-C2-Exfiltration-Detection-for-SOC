@@ -37,7 +37,7 @@
 
 <a id="section-1"></a>
 
-## 1. Project Overview
+## 1. Project Overview.
 
 Every intrusion has to talk to the network. Even when malware is obfuscated and endpoints are quiet, the attacker's **reconnaissance**, **command-and-control (C2)** channel, and **data exfiltration** leave measurable traces in network traffic.
 
@@ -62,7 +62,7 @@ The output is a reproducible investigation package: annotated packet captures, Z
 
 <a id="section-3"></a>
 
-## 3. Scenario
+## 3. Scenario.
 
 > A small organization suspects that a workstation on its internal network has been compromised. The SOC receives network captures and sensor logs. The analyst must determine **what happened, how it happened, what data left the network, and what to do next**, using network telemetry only.
 
@@ -99,7 +99,7 @@ flowchart LR
 
 <a id="section-5"></a>
 
-## 5. Toolchain
+## 5. Toolchain.
 
 | Category | Tool | Purpose |
 |----------|------|---------|
