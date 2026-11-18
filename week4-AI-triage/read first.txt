@@ -1,0 +1,7 @@
+how to run the script
+   1: open the terminal at the same folder included (file.pcap , soar-engine.py ).
+   2: run this command to connect the virus total API : export VT_API_KEY="your_API"
+   3: after that also run this command to start the script : sudo -E python3 soar_engine.py file.pcap
+
+make sure you understand what you do with this file.
+bestwishis: ezzat ammar and mohamed shalaby.
