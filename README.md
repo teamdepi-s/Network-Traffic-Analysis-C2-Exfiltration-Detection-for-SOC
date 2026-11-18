@@ -49,7 +49,7 @@ The output is a reproducible investigation package: annotated packet captures, Z
 
 <a id="section-2"></a>
 
-## 2. Objectives
+## 2. Objectives.
 
 | # | Objective | Outcome |
 |---|-----------|---------|
@@ -74,7 +74,7 @@ Evidence comes from two sources:
 
 <a id="section-4"></a>
 
-## 4. Lab Architecture
+## 4. Lab Architecture.
 
 ```mermaid
 flowchart LR
@@ -114,7 +114,7 @@ flowchart LR
 
 <a id="section-6"></a>
 
-## 6. Repository Structure
+## 6. Repository Structure.
 
 ```
 network-threat-detection-soc/
