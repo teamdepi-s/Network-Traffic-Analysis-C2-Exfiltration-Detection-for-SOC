@@ -1,0 +1,158 @@
+# ==============================================================================
+#  pcap-anomaly.rules  -  Generic anomaly / abnormal-behavior rules for Suricata
+#  Designed to be run OFFLINE against any pcap:
+#      suricata -r capture.pcap -S pcap-anomaly.rules -l ./out -k none
+#  Notes:
+#   * Rules use "any" for addresses so they fit every capture, whatever its
+#     network layout. Tune the thresholds if your pcap is very large/noisy.
+#   * -k none  : ignore bad checksums (common in pcaps taken on the sender host)
+#   * SIDs 9100001 - 9100999 (local range). Priority 1 = high, 3 = low/noise.
+#   * Results: ./out/fast.log  and  ./out/eve.json
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. RECONNAISSANCE / SCANNING
+# ------------------------------------------------------------------------------
+alert tcp any any -> any any (msg:"ANOM SCAN Possible TCP SYN scan/flood"; flags:S,12; threshold:type both, track by_src, count 30, seconds 10; classtype:attempted-recon; priority:2; sid:9100001; rev:1;)
+alert tcp any any -> any any (msg:"ANOM SCAN TCP NULL scan (no flags)"; flags:0; threshold:type limit, track by_src, count 1, seconds 60; classtype:attempted-recon; priority:2; sid:9100002; rev:1;)
+alert tcp any any -> any any (msg:"ANOM SCAN TCP Xmas scan (FIN+PSH+URG)"; flags:FPU,12; threshold:type limit, track by_src, count 1, seconds 60; classtype:attempted-recon; priority:2; sid:9100003; rev:1;)
+alert tcp any any -> any any (msg:"ANOM SCAN TCP FIN-only scan"; flags:F,12; flow:stateless; threshold:type both, track by_src, count 10, seconds 10; classtype:attempted-recon; priority:2; sid:9100004; rev:1;)
+alert tcp any any -> any any (msg:"ANOM SCAN TCP ACK scan/sweep"; flags:A,12; flow:stateless; threshold:type both, track by_src, count 100, seconds 5; classtype:attempted-recon; priority:3; sid:9100005; rev:1;)
+alert icmp any any -> any any (msg:"ANOM SCAN ICMP ping sweep"; itype:8; threshold:type both, track by_src, count 20, seconds 5; classtype:attempted-recon; priority:3; sid:9100006; rev:1;)
+alert icmp any any -> any any (msg:"ANOM SCAN ICMP port-unreachable flood (UDP scan response)"; itype:3; icode:3; threshold:type both, track by_dst, count 30, seconds 10; classtype:attempted-recon; priority:3; sid:9100007; rev:1;)
+alert icmp any any -> any any (msg:"ANOM SCAN ICMP timestamp request"; itype:13; classtype:attempted-recon; priority:3; sid:9100008; rev:1;)
+alert icmp any any -> any any (msg:"ANOM SCAN ICMP address mask request"; itype:17; classtype:attempted-recon; priority:3; sid:9100009; rev:1;)
+alert ip any any -> any any (msg:"ANOM SCAN Possible traceroute (TTL=1 burst)"; ttl:1; threshold:type both, track by_src, count 10, seconds 10; classtype:attempted-recon; priority:3; sid:9100010; rev:1;)
+
+# ------------------------------------------------------------------------------
+# 2. PACKET / PROTOCOL ANOMALIES
+# ------------------------------------------------------------------------------
+alert tcp any any -> any any (msg:"ANOM PROTO TCP SYN+FIN set (illegal flags)"; flags:SF,12; classtype:bad-unknown; priority:2; sid:9100020; rev:1;)
+alert tcp any any -> any any (msg:"ANOM PROTO TCP SYN+RST set (illegal flags)"; flags:SR,12; classtype:bad-unknown; priority:2; sid:9100021; rev:1;)
+alert tcp any any -> any any (msg:"ANOM PROTO TCP FIN+RST set (illegal flags)"; flags:FR,12; classtype:bad-unknown; priority:2; sid:9100022; rev:1;)
+alert tcp any 0 -> any any (msg:"ANOM PROTO TCP source port 0"; flow:stateless; classtype:bad-unknown; priority:2; sid:9100023; rev:1;)
+alert tcp any any -> any 0 (msg:"ANOM PROTO TCP destination port 0"; flow:stateless; classtype:bad-unknown; priority:2; sid:9100024; rev:1;)
+alert udp any 0 -> any any (msg:"ANOM PROTO UDP source port 0"; classtype:bad-unknown; priority:2; sid:9100025; rev:1;)
+alert udp any any -> any 0 (msg:"ANOM PROTO UDP destination port 0"; classtype:bad-unknown; priority:2; sid:9100026; rev:1;)
+alert ip any any -> any any (msg:"ANOM PROTO Source equals destination IP (LAND-style)"; sameip; threshold:type limit, track by_src, count 1, seconds 60; classtype:attempted-dos; priority:2; sid:9100027; rev:1;)
+alert ip any any -> any any (msg:"ANOM PROTO IP loose source routing option"; ipopts:lsrr; classtype:bad-unknown; priority:2; sid:9100028; rev:1;)
+alert ip any any -> any any (msg:"ANOM PROTO IP strict source routing option"; ipopts:ssrr; classtype:bad-unknown; priority:2; sid:9100029; rev:1;)
+alert ip any any -> any any (msg:"ANOM PROTO Fragment flood"; fragbits:M; threshold:type both, track by_src, count 100, seconds 10; classtype:attempted-dos; priority:2; sid:9100030; rev:1;)
+alert icmp any any -> any any (msg:"ANOM PROTO ICMP redirect"; itype:5; classtype:bad-unknown; priority:2; sid:9100031; rev:1;)
+alert icmp any any -> any any (msg:"ANOM PROTO ICMP large echo (possible Ping-of-Death/tunnel)"; itype:8; dsize:>700; classtype:bad-unknown; priority:2; sid:9100032; rev:1;)
+alert icmp any any -> any any (msg:"ANOM PROTO ICMP echo flood"; itype:8; threshold:type both, track by_dst, count 100, seconds 5; classtype:attempted-dos; priority:2; sid:9100033; rev:1;)
+alert tcp any any -> any any (msg:"ANOM PROTO RST flood"; flags:R,12; flow:stateless; threshold:type both, track by_dst, count 200, seconds 5; classtype:attempted-dos; priority:3; sid:9100034; rev:1;)
+
+# ------------------------------------------------------------------------------
+# 3. BRUTE FORCE / REPEATED CONNECTION ATTEMPTS (per destination service)
+# ------------------------------------------------------------------------------
+alert tcp any any -> any 22 (msg:"ANOM BRUTE Possible SSH brute force"; flags:S,12; threshold:type both, track by_src, count 10, seconds 60; classtype:attempted-admin; priority:2; sid:9100040; rev:1;)
+alert tcp any any -> any 21 (msg:"ANOM BRUTE Possible FTP brute force"; flags:S,12; threshold:type both, track by_src, count 10, seconds 60; classtype:attempted-admin; priority:2; sid:9100041; rev:1;)
+alert tcp any any -> any 23 (msg:"ANOM BRUTE Possible Telnet brute force"; flags:S,12; threshold:type both, track by_src, count 10, seconds 60; classtype:attempted-admin; priority:2; sid:9100042; rev:1;)
+alert tcp any any -> any 3389 (msg:"ANOM BRUTE Possible RDP brute force"; flags:S,12; threshold:type both, track by_src, count 10, seconds 60; classtype:attempted-admin; priority:2; sid:9100043; rev:1;)
+alert tcp any any -> any 445 (msg:"ANOM BRUTE Possible SMB brute force / worm spread"; flags:S,12; threshold:type both, track by_src, count 15, seconds 60; classtype:attempted-admin; priority:2; sid:9100044; rev:1;)
+alert tcp any any -> any 1433 (msg:"ANOM BRUTE Possible MSSQL brute force"; flags:S,12; threshold:type both, track by_src, count 10, seconds 60; classtype:attempted-admin; priority:2; sid:9100045; rev:1;)
+alert tcp any any -> any 3306 (msg:"ANOM BRUTE Possible MySQL brute force"; flags:S,12; threshold:type both, track by_src, count 10, seconds 60; classtype:attempted-admin; priority:2; sid:9100046; rev:1;)
+alert tcp any any -> any 5432 (msg:"ANOM BRUTE Possible PostgreSQL brute force"; flags:S,12; threshold:type both, track by_src, count 10, seconds 60; classtype:attempted-admin; priority:2; sid:9100047; rev:1;)
+alert tcp any any -> any 5900:5910 (msg:"ANOM BRUTE Possible VNC brute force"; flags:S,12; threshold:type both, track by_src, count 10, seconds 60; classtype:attempted-admin; priority:2; sid:9100048; rev:1;)
+alert tcp any any -> any [5985,5986] (msg:"ANOM BRUTE Possible WinRM brute force"; flags:S,12; threshold:type both, track by_src, count 10, seconds 60; classtype:attempted-admin; priority:2; sid:9100049; rev:1;)
+alert http any any -> any any (msg:"ANOM BRUTE Many HTTP 401 responses (web login brute force)"; flow:established,to_client; http.stat_code; content:"401"; threshold:type both, track by_dst, count 10, seconds 60; classtype:attempted-admin; priority:2; sid:9100050; rev:1;)
+alert http any any -> any any (msg:"ANOM BRUTE Many HTTP 404 responses (directory/content scan)"; flow:established,to_client; http.stat_code; content:"404"; threshold:type both, track by_dst, count 30, seconds 30; classtype:attempted-recon; priority:2; sid:9100051; rev:1;)
+
+# ------------------------------------------------------------------------------
+# 4. CLEARTEXT / INSECURE PROTOCOLS AND CREDENTIALS
+# ------------------------------------------------------------------------------
+alert tcp any any -> any 21 (msg:"ANOM CLEARTEXT FTP password sent in clear"; flow:established,to_server; content:"PASS "; startswith; classtype:policy-violation; priority:3; sid:9100060; rev:1;)
+alert tcp any any -> any 23 (msg:"ANOM CLEARTEXT Telnet session"; flow:established,to_server; dsize:>0; threshold:type limit, track by_src, count 1, seconds 300; classtype:policy-violation; priority:3; sid:9100061; rev:1;)
+alert tcp any any -> any 110 (msg:"ANOM CLEARTEXT POP3 password in clear"; flow:established,to_server; content:"PASS "; startswith; classtype:policy-violation; priority:3; sid:9100062; rev:1;)
+alert tcp any any -> any 143 (msg:"ANOM CLEARTEXT IMAP login in clear"; flow:established,to_server; content:"LOGIN "; nocase; classtype:policy-violation; priority:3; sid:9100063; rev:1;)
+alert http any any -> any any (msg:"ANOM CLEARTEXT HTTP Basic authentication"; flow:established,to_server; http.header; content:"Authorization|3a| Basic "; nocase; classtype:policy-violation; priority:3; sid:9100064; rev:1;)
+alert http any any -> any any (msg:"ANOM CLEARTEXT HTTP POST with password field"; flow:established,to_server; http.method; content:"POST"; http.request_body; content:"password="; nocase; classtype:policy-violation; priority:3; sid:9100065; rev:1;)
+alert tcp any any -> any 161 (msg:"ANOM CLEARTEXT SNMP default community 'public'"; flow:stateless; content:"public"; classtype:attempted-recon; priority:3; sid:9100066; rev:1;)
+alert udp any any -> any 161 (msg:"ANOM CLEARTEXT SNMP default community 'public' over UDP"; content:"public"; classtype:attempted-recon; priority:3; sid:9100067; rev:1;)
+alert tls any any -> any any (msg:"ANOM TLS Obsolete protocol version (SSLv2/SSLv3/TLS1.0)"; ssl_version:sslv2,sslv3,tls1.0; classtype:policy-violation; priority:3; sid:9100068; rev:1;)
+
+# ------------------------------------------------------------------------------
+# 5. SUSPICIOUS / NON-STANDARD SERVICES AND PORTS
+# ------------------------------------------------------------------------------
+alert http any any -> any ![80,8080,8000,8008,8888,3128,443,8443] (msg:"ANOM SERVICE HTTP on non-standard port"; flow:established,to_server; classtype:non-standard-protocol; priority:3; sid:9100080; rev:1;)
+alert tls any any -> any ![443,8443,993,995,465,636,989,990,5061] (msg:"ANOM SERVICE TLS on non-standard port"; flow:established,to_server; threshold:type limit, track by_src, count 1, seconds 300; classtype:non-standard-protocol; priority:3; sid:9100081; rev:1;)
+alert tcp any any -> any 6660:6669 (msg:"ANOM SERVICE IRC port traffic (possible botnet C2)"; flow:established,to_server; threshold:type limit, track by_src, count 1, seconds 300; classtype:trojan-activity; priority:2; sid:9100082; rev:1;)
+alert tcp any any -> any any (msg:"ANOM SERVICE IRC registration (NICK/USER) on any port"; flow:established,to_server; content:"NICK "; startswith; content:"USER "; distance:0; classtype:trojan-activity; priority:2; sid:9100083; rev:1;)
+alert tcp any any -> any [4444,5555,1337,31337,12345,6666,9999] (msg:"ANOM SERVICE Connection to common backdoor/shell port"; flow:to_server,established; threshold:type limit, track by_src, count 1, seconds 300; classtype:trojan-activity; priority:2; sid:9100084; rev:1;)
+alert tcp any any -> any any (msg:"ANOM SERVICE Cryptocurrency miner (Stratum protocol)"; flow:established,to_server; content:"mining.subscribe"; nocase; classtype:trojan-activity; priority:2; sid:9100085; rev:1;)
+alert tcp any any -> any 445 (msg:"ANOM SERVICE SMBv1 negotiation (legacy / EternalBlue-era)"; flow:established,to_server; content:"|ff|SMB"; offset:4; depth:4; classtype:attempted-admin; priority:2; sid:9100086; rev:1;)
+alert udp any any -> any 69 (msg:"ANOM SERVICE TFTP request"; threshold:type limit, track by_src, count 1, seconds 300; classtype:policy-violation; priority:3; sid:9100087; rev:1;)
+
+# ------------------------------------------------------------------------------
+# 6. DNS ABUSE (tunneling, DGA, dynamic DNS, onion, floods)
+# ------------------------------------------------------------------------------
+alert dns any any -> any any (msg:"ANOM DNS Very long query name (possible tunneling/exfil)"; dns.query; bsize:>60; threshold:type limit, track by_src, count 1, seconds 60; classtype:bad-unknown; priority:2; sid:9100100; rev:1;)
+alert dns any any -> any any (msg:"ANOM DNS High query rate (flood/tunneling)"; dns.query; content:"."; threshold:type both, track by_src, count 100, seconds 10; classtype:bad-unknown; priority:2; sid:9100101; rev:1;)
+alert dns any any -> any any (msg:"ANOM DNS Query for .onion domain"; dns.query; content:".onion"; endswith; nocase; classtype:policy-violation; priority:2; sid:9100102; rev:1;)
+alert dns any any -> any any (msg:"ANOM DNS Algorithmically generated looking domain (DGA)"; dns.query; pcre:"/^[bcdfghjklmnpqrstvwxz0-9]{12,}\.[a-z]{2,}$/i"; threshold:type limit, track by_src, count 3, seconds 60; classtype:trojan-activity; priority:2; sid:9100103; rev:1;)
+alert dns any any -> any any (msg:"ANOM DNS Query to dynamic DNS provider"; dns.query; pcre:"/(duckdns\.org|no-ip\.(com|org|biz)|ddns\.net|hopto\.org|zapto\.org|sytes\.net|servebeer\.com|serveftp\.com)$/i"; threshold:type limit, track by_src, count 1, seconds 300; classtype:bad-unknown; priority:3; sid:9100104; rev:1;)
+alert dns any any -> any any (msg:"ANOM DNS Query to high-risk TLD"; dns.query; pcre:"/\.(top|xyz|tk|ml|ga|cf|gq|zip|mov|click|work|rest)$/i"; threshold:type limit, track by_src, count 3, seconds 300; classtype:bad-unknown; priority:3; sid:9100105; rev:1;)
+alert udp any any -> any ![53,5353,5355,137] (msg:"ANOM DNS Standard DNS query on non-standard port"; content:"|01 00 00 01 00 00 00 00 00 00|"; offset:2; depth:10; classtype:non-standard-protocol; priority:3; sid:9100106; rev:1;)
+alert tcp any any -> any 53 (msg:"ANOM DNS TCP query traffic (zone transfer / large response / tunneling)"; flow:established,to_server; dsize:>0; threshold:type limit, track by_src, count 1, seconds 120; classtype:bad-unknown; priority:3; sid:9100107; rev:1;)
+alert dns any any -> any any (msg:"ANOM DNS Excessive subdomain depth"; dns.query; pcre:"/^([^.]+\.){6,}[^.]+$/"; threshold:type limit, track by_src, count 3, seconds 60; classtype:bad-unknown; priority:3; sid:9100108; rev:1;)
+
+# ------------------------------------------------------------------------------
+# 7. WEB ATTACKS / HOSTILE HTTP CLIENTS
+# ------------------------------------------------------------------------------
+alert http any any -> any any (msg:"ANOM WEB Directory traversal attempt"; flow:established,to_server; http.uri; content:"../"; classtype:web-application-attack; priority:1; sid:9100120; rev:1;)
+alert http any any -> any any (msg:"ANOM WEB Encoded directory traversal attempt"; flow:established,to_server; http.uri; pcre:"/(%2e%2e(%2f|%5c|\/|\\)|\.\.%2f|\.\.%5c)/i"; classtype:web-application-attack; priority:1; sid:9100121; rev:1;)
+alert http any any -> any any (msg:"ANOM WEB Access to sensitive system file"; flow:established,to_server; http.uri; pcre:"/(etc\/passwd|etc\/shadow|boot\.ini|win\.ini|\.htpasswd|\.git\/config|\.env$|web\.config)/i"; classtype:web-application-attack; priority:1; sid:9100122; rev:1;)
+alert http any any -> any any (msg:"ANOM WEB SQL injection UNION SELECT"; flow:established,to_server; http.uri; content:"union"; nocase; content:"select"; nocase; distance:0; classtype:web-application-attack; priority:1; sid:9100123; rev:1;)
+alert http any any -> any any (msg:"ANOM WEB SQL injection tautology/comment"; flow:established,to_server; http.uri; pcre:"/('|%27)\s*(or|and)\s*('|%27)?\d*('|%27)?\s*=\s*('|%27)?\d*/i"; classtype:web-application-attack; priority:1; sid:9100124; rev:1;)
+alert http any any -> any any (msg:"ANOM WEB SQL injection time-based (sleep/benchmark)"; flow:established,to_server; http.uri; pcre:"/(sleep\s*\(\s*\d+|benchmark\s*\(|waitfor\s+delay|pg_sleep\s*\()/i"; classtype:web-application-attack; priority:1; sid:9100125; rev:1;)
+alert http any any -> any any (msg:"ANOM WEB Cross-site scripting attempt in URI"; flow:established,to_server; http.uri; pcre:"/(<|%3c)\s*script|onerror\s*=|onload\s*=|javascript\x3a/i"; classtype:web-application-attack; priority:2; sid:9100126; rev:1;)
+alert http any any -> any any (msg:"ANOM WEB Command injection characters in URI"; flow:established,to_server; http.uri; pcre:"/(\x3b|%3b|\||%7c|`|%60|\$\(|%24%28)\s*(cat|ls|id|whoami|uname|wget|curl|nc|bash|sh|powershell|cmd)\b/i"; classtype:web-application-attack; priority:1; sid:9100127; rev:1;)
+alert http any any -> any any (msg:"ANOM WEB Webshell style command parameter"; flow:established,to_server; http.uri; pcre:"/[?&](cmd|exec|command|shell|execute)=/i"; classtype:web-application-attack; priority:1; sid:9100128; rev:1;)
+alert http any any -> any any (msg:"ANOM WEB Shellshock attempt in header"; flow:established,to_server; http.header; content:"() {"; classtype:attempted-admin; priority:1; sid:9100129; rev:1;)
+alert http any any -> any any (msg:"ANOM WEB Log4Shell JNDI lookup in URI"; flow:established,to_server; http.uri; content:"${jndi|3a|"; nocase; classtype:attempted-admin; priority:1; sid:9100130; rev:1;)
+alert http any any -> any any (msg:"ANOM WEB Log4Shell JNDI lookup in header"; flow:established,to_server; http.header; content:"${jndi|3a|"; nocase; classtype:attempted-admin; priority:1; sid:9100131; rev:1;)
+alert http any any -> any any (msg:"ANOM WEB Security scanner user-agent"; flow:established,to_server; http.user_agent; pcre:"/(sqlmap|nikto|nmap scripting|masscan|acunetix|nessus|openvas|w3af|dirbuster|gobuster|wfuzz|ffuf|hydra|zgrab|havij|netsparker|burp)/i"; classtype:attempted-recon; priority:1; sid:9100132; rev:1;)
+alert http any any -> any any (msg:"ANOM WEB Scripting-tool user-agent (curl/wget/python/go)"; flow:established,to_server; http.user_agent; pcre:"/^(curl|wget|python-requests|python-urllib|go-http-client|libwww-perl|java\/|powershell)/i"; threshold:type limit, track by_src, count 1, seconds 300; classtype:bad-unknown; priority:3; sid:9100133; rev:1;)
+alert http any any -> any any (msg:"ANOM WEB Unusual HTTP method CONNECT/TRACE/PUT/DELETE"; flow:established,to_server; http.method; pcre:"/^(CONNECT|TRACE|TRACK|PUT|DELETE|PROPFIND|DEBUG)$/"; classtype:bad-unknown; priority:3; sid:9100134; rev:1;)
+alert http any any -> any any (msg:"ANOM WEB Very large POST body (possible upload/exfil)"; flow:established,to_server; http.method; content:"POST"; http.header; pcre:"/Content-Length\x3a\s*\d{8,}/i"; classtype:bad-unknown; priority:2; sid:9100135; rev:1;)
+alert http any any -> any any (msg:"ANOM WEB Request to raw IP host (no domain name)"; flow:established,to_server; http.host; pcre:"/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(\x3a\d+)?$/"; threshold:type limit, track by_src, count 1, seconds 300; classtype:bad-unknown; priority:3; sid:9100136; rev:1;)
+alert http any any -> any any (msg:"ANOM WEB Request for script/webshell upload extension"; flow:established,to_server; http.uri; pcre:"/\.(php[3-8]?|phtml|jsp|jspx|asp|aspx|cgi)(\?|$)/i"; http.method; content:"PUT"; classtype:web-application-attack; priority:1; sid:9100137; rev:1;)
+
+# ------------------------------------------------------------------------------
+# 8. MALWARE DELIVERY / COMMAND AND CONTROL / POST-EXPLOITATION
+# ------------------------------------------------------------------------------
+alert http any any -> any any (msg:"ANOM MALWARE Windows executable (PE) downloaded over HTTP"; flow:established,to_client; file.data; content:"MZ"; startswith; content:"This program cannot be run in DOS mode"; distance:0; within:120; classtype:trojan-activity; priority:2; sid:9100150; rev:1;)
+alert http any any -> any any (msg:"ANOM MALWARE ELF executable downloaded over HTTP"; flow:established,to_client; file.data; content:"|7f 45 4c 46|"; startswith; classtype:trojan-activity; priority:2; sid:9100151; rev:1;)
+alert http any any -> any any (msg:"ANOM MALWARE Download of executable/script by URI extension"; flow:established,to_server; http.uri; pcre:"/\.(exe|dll|scr|bat|ps1|vbs|hta|jar|msi|sh)(\?|$)/i"; threshold:type limit, track by_src, count 3, seconds 300; classtype:trojan-activity; priority:3; sid:9100152; rev:1;)
+alert tcp any any -> any any (msg:"ANOM MALWARE Reverse shell command (bash /dev/tcp)"; flow:established; content:"/dev/tcp/"; classtype:shellcode-detect; priority:1; sid:9100153; rev:1;)
+alert tcp any any -> any any (msg:"ANOM MALWARE Interactive shell invocation (/bin/sh -i)"; flow:established; content:"/bin/sh -i"; classtype:shellcode-detect; priority:1; sid:9100154; rev:1;)
+alert tcp any any -> any any (msg:"ANOM MALWARE Shell command output (uid/gid) in network stream"; flow:established,to_client; content:"uid="; content:"gid="; distance:0; within:20; content:"groups="; distance:0; within:30; classtype:successful-admin; priority:1; sid:9100155; rev:1;)
+alert tcp any any -> any any (msg:"ANOM MALWARE PowerShell encoded command"; flow:established; content:"powershell"; nocase; pcre:"/-(e|enc|encodedcommand)\s+[A-Za-z0-9+\/=]{20,}/i"; classtype:trojan-activity; priority:1; sid:9100156; rev:1;)
+alert tcp any any -> any any (msg:"ANOM MALWARE PowerShell download cradle"; flow:established; content:"powershell"; nocase; pcre:"/(downloadstring|downloadfile|invoke-webrequest|iex\s*\(|invoke-expression|net\.webclient)/i"; classtype:trojan-activity; priority:1; sid:9100157; rev:1;)
+alert tcp any any -> any any (msg:"ANOM MALWARE Windows cmd.exe / net user style recon on wire"; flow:established; pcre:"/(cmd\.exe\s*\/c|net\s+user\s+\S+\s+\S+\s*\/add|net\s+localgroup\s+administrators)/i"; classtype:trojan-activity; priority:1; sid:9100158; rev:1;)
+alert tcp any any -> any any (msg:"ANOM MALWARE Large NOP sled (possible shellcode)"; flow:established; content:"|90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90|"; classtype:shellcode-detect; priority:1; sid:9100159; rev:1;)
+alert icmp any any -> any any (msg:"ANOM MALWARE ICMP tunnel (large non-standard echo payload)"; itype:8; dsize:>256; threshold:type both, track by_src, count 10, seconds 30; classtype:trojan-activity; priority:2; sid:9100160; rev:1;)
+alert icmp any any -> any any (msg:"ANOM MALWARE ICMP tunnel (large echo reply payload)"; itype:0; dsize:>256; threshold:type both, track by_src, count 10, seconds 30; classtype:trojan-activity; priority:2; sid:9100161; rev:1;)
+alert tcp any any -> any any (msg:"ANOM MALWARE Pastebin/raw-code hosting fetch"; flow:established,to_server; http.host; pcre:"/(pastebin\.com|paste\.ee|hastebin\.com|raw\.githubusercontent\.com|transfer\.sh|anonfiles)/i"; threshold:type limit, track by_src, count 1, seconds 300; classtype:bad-unknown; priority:3; sid:9100162; rev:1;)
+
+# ------------------------------------------------------------------------------
+# 9. LATERAL MOVEMENT / INTERNAL ABUSE
+# ------------------------------------------------------------------------------
+alert tcp any any -> any 135 (msg:"ANOM LATERAL MS-RPC endpoint mapper connection"; flow:established,to_server; threshold:type limit, track by_src, count 1, seconds 300; classtype:attempted-recon; priority:3; sid:9100170; rev:1;)
+alert tcp any any -> any 445 (msg:"ANOM LATERAL SMB admin share access (ADMIN$/C$/IPC$)"; flow:established,to_server; content:"|5c 00|A|00|D|00|M|00|I|00|N|00|$|00|"; nocase; classtype:attempted-admin; priority:2; sid:9100171; rev:1;)
+alert tcp any any -> any 445 (msg:"ANOM LATERAL SMB C$ share access"; flow:established,to_server; content:"|5c 00|C|00|$|00|"; nocase; classtype:attempted-admin; priority:2; sid:9100172; rev:1;)
+alert tcp any any -> any 445 (msg:"ANOM LATERAL Possible PsExec service (PSEXESVC)"; flow:established,to_server; content:"P|00|S|00|E|00|X|00|E|00|S|00|V|00|C|00|"; nocase; classtype:attempted-admin; priority:1; sid:9100173; rev:1;)
+alert tcp any any -> any 88 (msg:"ANOM LATERAL Kerberos traffic burst (possible roasting/spraying)"; flow:to_server; threshold:type both, track by_src, count 50, seconds 30; classtype:attempted-admin; priority:3; sid:9100174; rev:1;)
+alert udp any any -> any [137,5355] (msg:"ANOM LATERAL NBNS/LLMNR name query burst (poisoning/recon)"; threshold:type both, track by_src, count 50, seconds 30; classtype:attempted-recon; priority:3; sid:9100175; rev:1;)
+alert udp any 67 -> any 68 (msg:"ANOM LATERAL DHCP server reply (check for rogue DHCP)"; threshold:type limit, track by_src, count 1, seconds 600; classtype:bad-unknown; priority:3; sid:9100176; rev:1;)
+
+# ------------------------------------------------------------------------------
+# 10. VOLUMETRIC / DOS
+# ------------------------------------------------------------------------------
+alert udp any any -> any any (msg:"ANOM DOS UDP flood to single host"; threshold:type both, track by_dst, count 500, seconds 5; classtype:attempted-dos; priority:2; sid:9100190; rev:1;)
+alert tcp any any -> any any (msg:"ANOM DOS TCP SYN flood to single host"; flags:S,12; threshold:type both, track by_dst, count 200, seconds 5; classtype:attempted-dos; priority:2; sid:9100191; rev:1;)
+alert http any any -> any any (msg:"ANOM DOS HTTP request flood to single host"; flow:established,to_server; threshold:type both, track by_dst, count 300, seconds 10; classtype:attempted-dos; priority:2; sid:9100192; rev:1;)
+alert udp any 123 -> any any (msg:"ANOM DOS Large NTP response (amplification)"; dsize:>400; threshold:type both, track by_dst, count 10, seconds 10; classtype:attempted-dos; priority:2; sid:9100193; rev:1;)
+alert udp any 53 -> any any (msg:"ANOM DOS Large DNS response (amplification)"; dsize:>1200; threshold:type both, track by_dst, count 10, seconds 10; classtype:attempted-dos; priority:2; sid:9100194; rev:1;)
+alert udp any 1900 -> any any (msg:"ANOM DOS SSDP response flood (amplification)"; threshold:type both, track by_dst, count 20, seconds 10; classtype:attempted-dos; priority:2; sid:9100195; rev:1;)
