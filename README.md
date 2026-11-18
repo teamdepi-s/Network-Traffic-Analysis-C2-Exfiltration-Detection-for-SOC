@@ -14,7 +14,7 @@
 
 ---
 
-## Table of Contents
+## Table of Contents.
 
 1. [Project Overview](#section-1)
 2. [Objectives](#section-2)
@@ -114,7 +114,7 @@ flowchart LR
 
 <a id="section-6"></a>
 
-## 6. Repository Structure.
+## 6. Repository Structure
 
 ```
 network-threat-detection-soc/
