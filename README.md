@@ -14,7 +14,7 @@
 
 ---
 
-## Table of Contents.
+## Table of Contents
 
 1. [Project Overview](#section-1)
 2. [Objectives](#section-2)
