@@ -292,19 +292,19 @@ Documented hallucinations and misclassifications are included deliberately, to s
 
 ## 11. Final Report Structure
 
-1. Cover page and document control
-2. **Executive Summary** (one page, non-technical)
+1. Cover page and document control.
+2. **Executive Summary** (one page, non-technical).
 3. Scope and methodology
-4. Environment and tooling
-5. Incident timeline
-6. Detailed findings (severity, confidence, evidence)
-7. MITRE ATT&CK mapping
-8. IOC table
-9. Detection engineering (rules, scripts, logic)
-10. AI-assisted triage and validation
-11. Recommendations (immediate / short-term / long-term)
-12. Limitations and lessons learned
-13. Appendices
+4. Environment and tooling.
+5. Incident timeline.
+6. Detailed findings (severity, confidence, evidence).
+7. MITRE ATT&CK mapping.
+8. IOC table.
+9. Detection engineering (rules, scripts, logic).
+10. AI-assisted triage and validation.
+11. Recommendations (immediate / short-term / long-term).
+12. Limitations and lessons learned.
+13. Appendices.
 
 <a id="section-12"></a>
 
